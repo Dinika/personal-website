@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dinika Saxena</title>
+		<meta name="description" content="personal website" />
+		<meta name="keywords" content="dinika saxena portfolio website" />
+		<meta name="author" content="Dinika Saxena" />
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/decolines.css" />
+		<link href=https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<a href="" class="logo"> <img src="img/signature.png" width="70px"> </a>
+		<nav>
+				<a href="index.html">Home</a>
+				<a href="index.html">Skills</a>
+				<a href="index.html">Work</a>
+				<a href="index.html">Blog</a>
+				<a href="index.html">Contact</a>
+		</nav>
+		<main>
+			<header class="main-header">
+				<h1 class="main-header-title">Dinika <span>Saxena</span></h1>
+				<h2 class="main-header-subtitle">web developer and designer at CERN</h2>
+			</header>
+		</main>
+		<script src="js/anime.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			var lineMaker = new LineMaker({
+					parent: { element: document.body, position: 'append' },
+					position: 'fixed',
+					lines: [
+						{top: 0, left: '0', width: '20vw', height: '100vh', color: '#F85659', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 0, direction: 'TopBottom' }},
+						{top: 0, left: '20vw', width: '20vw', height: '100vh', color: '#7030a0', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 150, direction: 'BottomTop' }},
+						{top: 0, left: '40vw', width: '20vw', height: '100vh', color: '#F85659', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 300, direction: 'TopBottom' }},
+						{top: 0, left: '60vw', width: '20vw', height: '100vh', color: '#7030a0', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 450, direction: 'BottomTop' }},
+						{top: 0, left: '80vw', width: '20vw', height: '100vh', color: '#F85659', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 600, direction: 'TopBottom' }}
+					]
+			});
+			
+			setTimeout(function() {
+				lineMaker.animateLinesOut();
+			}, 500);
+		})();
+		</script>
+	</body>
+</html>
