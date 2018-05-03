@@ -15,6 +15,7 @@ body {
     align-items: center;
 }
 
+
 .logo {
     position: fixed;
 }
@@ -42,7 +43,20 @@ body {
 	-webkit-transform: translate3d(0,100px,0);
 	transform: translate3d(0,100px,0);
 	-webkit-animation: fadeIn 2s ease-out forwards;
-    animation: fadeIn 2s ease-out forwards;
+    animation: fadeIn 3s ease-out forwards;
+}
+
+.next-button {
+	background: transparent;
+	border: 1px solid #fff;
+}
+
+.next-button:focus {
+	border: 1px solid #fff !important;
+}
+
+.next-button-arrow {
+	margin: 6px 30px;
 }
 
 .main-header .main-header-title {
@@ -56,7 +70,8 @@ body {
 
 .main-header .main-header-subtitle {
     font-weight: 100;
-    margin-top: -20px;
+	margin-top: -20px;
+	margin-bottom: 30px;
 }
 
 a {
@@ -69,7 +84,9 @@ nav {
 	width:100vh;    
 	height:45px;
 	position:fixed;
-	background:#4c4c4c;
+	left: 0;
+	display: flex;
+	justify-content: center;
 	transform-origin: left top;
 	transform:rotate(-90deg) translateX(-100%);
 }
@@ -82,8 +99,22 @@ nav a {
 	line-height: 45px;
 }
 
+nav a:hover {    
+	color: #fff;
+	margin-top: 5px;
+}
 
+#get-in-touch {
+	position: fixed;
+	right: 0;
+	top: 0;
+	font-size: 1.2em;
+	margin: 10px 20px;
+}
 
+#get-in-touch:hover {
+	color: #fff;
+}
 
 @-webkit-keyframes fadeAllIn {
 	0%, 50% { opacity: 0; -webkit-transform: translate3d(-10px,0,0); transform: translate3d(-10px,0,0); }
@@ -95,7 +126,6 @@ nav a {
 	100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
 }
 
-a:hover, a:focus { color: #666c7b; }
 
 /* Individual demo styles */
 .demo-2 {
