@@ -1,0 +1,19 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+html, body {
+    background-color: var(--primary-100);
+}
+
+.todo-remove {
+    background: #f0f0f0;
+    /* box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset, -10px -10px 10px #ffffff inset; */
+    border-radius: 20px;
+    width: 480px;
+    height: 240px;
+    background: #fafafa;
+    box-shadow: 40px 40px 40px #b8c5c5, 0 0 0 #ffffff, 0 0 0 #f3f3f3 inset, 2px 2px 2px #ffffff inset;
+    background: #f3ffff;
+
+}
