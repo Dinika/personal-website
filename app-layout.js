@@ -1,6 +1,7 @@
 import { TemplateRenderer } from './utils/TemplateRenderer.js';
 import './components/nav-bar.js';
 import './sections/home-section.js';
+import './sections/work-section.js';
 
 class AppLayout extends TemplateRenderer {
     constructor() {
@@ -23,7 +24,9 @@ class AppLayout extends TemplateRenderer {
             <div>
                 <nav-bar></nav-bar>
                 
-                <home-section>/home-section>
+                <home-section></home-section>
+
+                <work-section></work-section>
             </div>
         `;
     }

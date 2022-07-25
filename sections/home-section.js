@@ -1,10 +1,6 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
 import '../components/app-paper.js';
 
-const shortBio = `
-
-`;
-
 class HomeSection extends TemplateRenderer {
 
     get template() {
