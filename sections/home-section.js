@@ -40,6 +40,12 @@ class HomeSection extends TemplateRenderer {
                 color: var(--black-700);
             }
 
+            app-paper {
+                max-width: 560px;
+                min-height: 228px;
+                padding: 36px;
+            }
+
         </style>
         
         

@@ -35,8 +35,9 @@ class ProjectThumbnail extends TemplateRenderer {
                     justify-content: center;
                     padding-left: 24px;
                     box-sizing: border-box;
-                    margin: 40px 48px;
+                    margin: 40px 40px;
                     cursor: pointer;
+                    z-index: 0;
                 }
 
                 .parent::before {
@@ -73,17 +74,14 @@ class ProjectThumbnail extends TemplateRenderer {
                     font-weight: 500;
                     line-height: 23px;
                 }
-                
             
             </style>
             ${this.project
                 ? `
-                <app-paper>
                     <div class="parent">    
                         <h3>${this.project.name}</h3>
                         <p>${this.project.role}</p>
                     </div>
-                </app-paper>
                     `
                 : ''
             }
