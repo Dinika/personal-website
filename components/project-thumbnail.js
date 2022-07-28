@@ -50,6 +50,8 @@ class ProjectThumbnail extends TemplateRenderer {
                     left: 0px;
                     border-radius: 12px;
                     transition: transform 0.2s ease-in-out;
+                    box-shadow: 18px 18px 18px rgba(177, 196, 199, 0.25);
+                    border-radius: 12px;
                 }
 
                 .parent:hover::before {

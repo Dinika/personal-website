@@ -11,7 +11,7 @@ class WorkSection extends TemplateRenderer {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin: 92px 60px 0 60px;
+                margin: 92px 60px 0 0px;
 
             }
 

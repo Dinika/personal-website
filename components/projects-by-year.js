@@ -83,6 +83,20 @@ class ProjectsByYear extends TemplateRenderer {
                     z-index: 1;
                 }
 
+                .headers { 
+                    margin-left: 24px;
+                }
+
+                h3 {
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin: 12px 0;
+                }
+
                 .project-details {
                     flex-direction: column;
                 }
@@ -90,6 +104,44 @@ class ProjectsByYear extends TemplateRenderer {
                 .thumbnails {
                     flex-wrap: wrap;
                 }
+
+                .location {
+                    display: flex;
+                    align-items: flex-start;
+                }
+
+                a {
+                    font-family: Quicksand;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    text-decoration: none;
+                    color: var(--black-700);
+                    display: inline-block;
+                    position: relative;
+                    margin-left: 4px;
+                    padding-bottom: 8px;
+                }
+
+                a:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: var(--primary-500);
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                  }
+
+                  a:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                  } 
 
             </style>
 
@@ -109,7 +161,11 @@ class ProjectsByYear extends TemplateRenderer {
                 <div class="project-details">
                     <div class="headers">
                         <h3>Work Projects</h3>
-                        <h5>CERN, Switzerland & France</h5>
+
+                        <div class="location">
+                            <img src="../assets/map-marker.svg" />
+                            <a href="https://www.home.cern/">CERN, Switzerland & France</a>
+                        </div>
                     <div>
 
                     <div class="thumbnails">
