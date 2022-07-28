@@ -30,8 +30,8 @@ class ProjectThumbnail extends TemplateRenderer {
                     text-align: left;
                     display: flex;
                     flex-direction: column;
-                    width: 194px;
-                    height: 194px;
+                    width: 224px;
+                    height: 224px;
                     justify-content: center;
                     padding-left: 24px;
                     box-sizing: border-box;
@@ -55,20 +55,25 @@ class ProjectThumbnail extends TemplateRenderer {
                 }
 
                 .parent:hover::before {
-                    transform: scale(1.5);
+                    transform: scale(1.4);
                 }
 
                 h3, p {
                     font-family: 'Quicksand', sans-serif;
                     letter-spacing: 0em;
                     margin: 0;
+                    transition: transform 0.2s ease-in-out;
+                }
+
+                .parent:hover h3, .parent:hover p {
+                    transform: translate(-30px, -70px);
                 }
 
                 h3 {
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 25px;
-                    margin-bottom: 4px;
+                    margin-bottom: 2px;
                 }
             
                 p {
@@ -76,13 +81,57 @@ class ProjectThumbnail extends TemplateRenderer {
                     font-weight: 500;
                     line-height: 23px;
                 }
+
+
+                .description {
+                    position: absolute;
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: var(--primary-700);
+                    margin-top: 30px;
+                }
             
+                .more {
+                    position: absolute;
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: var(--primary-500);                    
+                }
+
+                .hidden-until-hover {
+                    transform: scale(0);
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .parent:hover .hidden-until-hover {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                .parent:hover .description {
+                    transform: translateX(-30px);
+                }
+
+                .parent:hover .more {
+                    transform: translate(140px, 100px);
+                }
+
             </style>
             ${this.project
                 ? `
                     <div class="parent">    
                         <h3>${this.project.name}</h3>
                         <p>${this.project.role}</p>
+                        <p class="description hidden-until-hover">${this.project.description}</p>
+                        <a class="more hidden-until-hover">More</a>
                     </div>
                     `
                 : ''
