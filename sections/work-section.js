@@ -1,7 +1,16 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
-import '../components/projects-by-year.js';
+import * as yearDetailsComponent from '../components/projects-by-year.js';
+import { projects } from '../data/projects.js';
+import { toComponentArgs } from '../utils/methods.js';
 
 class WorkSection extends TemplateRenderer {
+
+    projectsByYear = Object.values(projects).map((yearDetails) => (
+        `<projects-by-year 
+            ${yearDetailsComponent.yearDetailsAttrName}="${toComponentArgs(yearDetails)}">
+        </projects-by-year>
+        `
+    ));
 
     get template() {
         return `
@@ -17,10 +26,7 @@ class WorkSection extends TemplateRenderer {
 
         </style>
         
-        <projects-by-year></projects-by-year>
-
-        
-        
+        ${this.projectsByYear}        
     `;
     }
 

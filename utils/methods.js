@@ -1,0 +1,1 @@
+export const toComponentArgs = (value) => encodeURIComponent(JSON.stringify(value)); 

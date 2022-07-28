@@ -1,49 +1,24 @@
 import { TemplateRenderer } from "../utils/TemplateRenderer.js";
 import './project-thumbnail.js';
 
-// TODO: Replace with proper data
-const projects = [
-    {
-        name: 'WRAP',
-        role: 'Developer',
-        description: 'A figma like app that allows users to design dashboards that can subscribe to several devices in LHC',
-        link: ''
-    },
-    {
-        name: 'HelpAlarm',
-        role: 'Lead Developer',
-        description: 'Application used at the CCC to observe and manage alarms around CERN',
-        link: ''
-    },
-    {
-        name: 'ACW',
-        role: 'Developer',
-        description: 'Java and JS framework used to power all GUI applications in our section',
-        link: ''
-    },
-    {
-        name: 'TI Logbook',
-        role: 'Tech Lead',
-        description: 'Applications used by operators to manage and log events, work-orders, calls around the LHC',
-        link: ''
-    },
-    {
-        name: 'LHC Checklist',
-        role: 'Developer',
-        description: 'Used to test machine before the start of the LHC runs.',
-        link: ''
-    },
-    {
-        name: 'ASM',
-        role: 'Platform Engineer',
-        description: 'Used to schedule different operations and runs on the LHC',
-        link: ''
-    }
-];
+export const yearDetailsAttrName = 'yeardetails';
 
 class ProjectsByYear extends TemplateRenderer {
 
-    workThumbnails = projects
+    static get observedAttributes() {
+        return [yearDetailsAttrName];
+    }
+
+    attributeChangedCallback(attrName, newValue) {
+        if (attrName === yearDetailsAttrName) {
+            this.yearDetails = JSON.parse(decodeURIComponent(newValue));
+            this.removeAttribute(yearDetailsAttrName);
+        }
+
+        this.render();
+    }
+
+    toProjectThumbnails = (projects) => projects
         .map(p => `
             <project-thumbnail project="${encodeURIComponent(JSON.stringify(p))}"></project-thumbnail>
         `)
@@ -145,35 +120,38 @@ class ProjectsByYear extends TemplateRenderer {
 
             </style>
 
-            <div class="container">
+            ${this.yearDetails ? `
+                <div class="container">
 
-                <div class="y-axis">
-                    <div class="y-axis-label">
-                        <h4>Oct 2020 - Now</h4>
-                        <div class="marker"></div>
-                    </div>                    
-                    
-                    <svg width="1" height="100%" viewBox="0 0 1 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.5" y1="0.5" x2="0.499934" y2="1499.5" stroke="#106C4B" stroke-linecap="square" stroke-dasharray="3 3"/>
-                    </svg>
-                </div>
-
-                <div class="project-details">
-                    <div class="headers">
-                        <h3>Work Projects</h3>
-
-                        <div class="location">
-                            <img src="../assets/map-marker.svg" />
-                            <a href="https://www.home.cern/">CERN, Switzerland & France</a>
-                        </div>
-                    <div>
-
-                    <div class="thumbnails">
-                        ${this.workThumbnails}
+                    <div class="y-axis">
+                        <div class="y-axis-label">
+                            <h4>${this.yearDetails.label}</h4>
+                            <div class="marker"></div>
+                        </div>                    
+                        
+                        <svg width="1" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.5" y1="0.5" x2="0.499934" y2="1499.5" stroke="#106C4B" stroke-linecap="square" stroke-dasharray="3 3"/>
+                        </svg>
                     </div>
-                </div>
 
-            </div>
+                    <div class="project-details">
+                        <div class="headers">
+                            <h3>Work Projects</h3>
+
+                            <div class="location">
+                                <img src="../assets/map-marker.svg" />
+                                <a href="${this.yearDetails.work.link}">${this.yearDetails.work.location}</a>
+                            </div>
+                        <div>
+
+                        <div class="thumbnails">
+                            ${this.toProjectThumbnails(this.yearDetails.work.projects)}
+                        </div>
+                    </div>
+
+                </div>            
+                ` : ''
+            }
         `;
     }
 }
