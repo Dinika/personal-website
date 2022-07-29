@@ -76,6 +76,21 @@ class ProjectsByYear extends TemplateRenderer {
                     flex-direction: column;
                 }
 
+                .personal-projects {
+                    align-items: flex-end;
+                }
+
+                .personal-projects .headers {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    margin-right: 64px;
+                }
+
+                .personal-projects .thumbnails {
+                    justify-content: flex-end;
+                }
+
                 .thumbnails {
                     flex-wrap: wrap;
                 }
@@ -134,21 +149,37 @@ class ProjectsByYear extends TemplateRenderer {
                         </svg>
                     </div>
 
-                    <div class="project-details">
-                        <div class="headers">
-                            <h3>Work Projects</h3>
+                    <div>
+                        <div class="project-details">
+                            <div class="headers">
+                                <h3>Work Projects</h3>
 
-                            <div class="location">
-                                <img src="../assets/map-marker.svg" />
-                                <a href="${this.yearDetails.work.link}">${this.yearDetails.work.location}</a>
+                                <div class="location">
+                                    <img src="../assets/map-marker.svg" />
+                                    <a href="${this.yearDetails.work.link}">${this.yearDetails.work.location}</a>
+                                </div>
                             </div>
-                        <div>
 
-                        <div class="thumbnails">
-                            ${this.toProjectThumbnails(this.yearDetails.work.projects)}
+                            <div class="thumbnails">
+                                ${this.toProjectThumbnails(this.yearDetails.work.projects)}
+                            </div>
+                        </div>
+
+                        <div class="project-details personal-projects">
+                            <div class="headers">
+                                <h3>Personal Projects</h3>
+
+                                <div class="location">
+                                    <img src="../assets/map-marker.svg" />
+                                    <a>${this.yearDetails.personal.location}</a>
+                                </div>
+                            </div>
+
+                            <div class="thumbnails">
+                                ${this.toProjectThumbnails(this.yearDetails.personal.projects)}
+                            </div>
                         </div>
                     </div>
-
                 </div>            
                 ` : ''
             }

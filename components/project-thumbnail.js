@@ -74,6 +74,7 @@ class ProjectThumbnail extends TemplateRenderer {
                     font-weight: 700;
                     line-height: 25px;
                     margin-bottom: 2px;
+                    max-width: 150px;
                 }
             
                 p {
