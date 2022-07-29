@@ -38,7 +38,6 @@ class NavBar extends TemplateRenderer {
                 <li>Skills</li>
                 <li>About</li>
                 <li>Contact</li>
-                <li>Skills</li>
             </ul>
         </nav>
     `;
