@@ -78,9 +78,10 @@ class AboutSection extends TemplateRenderer {
             I like working in autonomous teams. I find <span class="highlight">pair-programming</span> and code-reviews fun and extremely helpful.
         </p>
 
-        Finally, I like it when I have the opportunity to get <span class="highlight">involved in all stacks of feature development</span> - from user-requirements gathering, to architecture design, backend / frontend development, code-deployment, and finally assessing user-reactions. Not only is it a gratifying experience to be in touch with our users needs, I belive, it also helps me deliver better engineering solutions.
-        </p>
         <p>
+            Finally, I like it when I have the opportunity to get <span class="highlight">involved in all stacks of feature development</span> - from user-requirements gathering, to architecture design, backend / frontend development, code-deployment, and finally assessing user-reactions. Not only is it a gratifying experience to be in touch with our users needs, I belive, it also helps me deliver better engineering solutions.
+        </p>
+        
         
         <div class="header">
             <img src="../assets/cutie-patootie.svg" title="Wagwan?" />
