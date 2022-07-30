@@ -1,5 +1,4 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
-import '../components/app-paper.js';
 
 class AboutSection extends TemplateRenderer {
 
@@ -54,7 +53,7 @@ class AboutSection extends TemplateRenderer {
         
         
         <h1>
-            About me.          
+            About me.        
         </h1>
 
         <div class="header">
@@ -73,9 +72,13 @@ class AboutSection extends TemplateRenderer {
         </div>
         <p>
             I like spending time on improving the quality of engineering systems. I am always eager to improve and develop my team’s ability to provide reliable, high available software by using priciples of <span class="highlight">automated testing</span> and <span class="highlight">CI/CD</span>.
+        </p>
 
+        <p>
             I like working in autonomous teams. I find <span class="highlight">pair-programming</span> and code-reviews fun and extremely helpful.
+        </p>
 
+        <p>
             Finally, I like it when I have the opportunity to get <span class="highlight">involved in all stacks of feature development</span> - from user-requirements gathering, to architecture design, backend / frontend development, code-deployment, and finally assessing user-reactions. Not only is it a gratifying experience to be in touch with our users needs, I belive, it also helps me deliver better engineering solutions.
         </p>
         

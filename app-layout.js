@@ -4,6 +4,7 @@ import './sections/home-section.js';
 import './sections/work-section.js';
 import './sections/skills-section.js';
 import './sections/about-section.js';
+import './sections/contact-section.js';
 
 class AppLayout extends TemplateRenderer {
     constructor() {
@@ -33,6 +34,8 @@ class AppLayout extends TemplateRenderer {
                 <skills-section></skills-section>
 
                 <about-section></about-section>
+                
+                <contact-section></contact-section>
             </div>
         `;
     }
