@@ -100,7 +100,7 @@ class ContactSection extends TemplateRenderer {
         
         <div class="header">
             <h1>Get in touch</h1>
-            <img src="../assets/send-me-love.svg" />
+            <img src="../assets/send-me-love.svg" title="(づ｡◕‿‿◕｡)づ - stranger danger"/>
         </div>
 
         <app-paper>

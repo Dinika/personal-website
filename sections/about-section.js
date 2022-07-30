@@ -57,7 +57,7 @@ class AboutSection extends TemplateRenderer {
         </h1>
 
         <div class="header">
-            <img src="../assets/not-a-robot.svg" />
+            <img src="../assets/not-a-robot.svg" title="Definitely not a robot or a freak. Except under certain circumstances." />
             <h4>Who am I?</h4>
         </div>
         <p>
@@ -67,7 +67,7 @@ class AboutSection extends TemplateRenderer {
         </p>
         
         <div class="header">
-            <img src="../assets/rainbows-and-sunshine.svg" />
+            <img src="../assets/rainbows-and-sunshine.svg" title="I wish they hadn't called it 'git blame'" />
             <h4>What kind of work do I enjoy?</h4>
         </div>
         <p>
@@ -78,12 +78,12 @@ class AboutSection extends TemplateRenderer {
             I like working in autonomous teams. I find <span class="highlight">pair-programming</span> and code-reviews fun and extremely helpful.
         </p>
 
-        <p>
-            Finally, I like it when I have the opportunity to get <span class="highlight">involved in all stacks of feature development</span> - from user-requirements gathering, to architecture design, backend / frontend development, code-deployment, and finally assessing user-reactions. Not only is it a gratifying experience to be in touch with our users needs, I belive, it also helps me deliver better engineering solutions.
+        Finally, I like it when I have the opportunity to get <span class="highlight">involved in all stacks of feature development</span> - from user-requirements gathering, to architecture design, backend / frontend development, code-deployment, and finally assessing user-reactions. Not only is it a gratifying experience to be in touch with our users needs, I belive, it also helps me deliver better engineering solutions.
         </p>
+        <p>
         
         <div class="header">
-            <img src="../assets/cutie-patootie.svg" />
+            <img src="../assets/cutie-patootie.svg" title="Wagwan?" />
             <h4>What do I like to do in my free time?</h4>
         </div>
         <p>
