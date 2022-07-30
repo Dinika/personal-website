@@ -37,7 +37,7 @@ class HomeSection extends TemplateRenderer {
                 font-style: normal;
                 font-weight: 500;
                 text-decoration-line: underline;
-                color: var(--black-700);
+                color: var(--text-700);
             }
 
             app-paper {

@@ -108,7 +108,7 @@ class ProjectsByYear extends TemplateRenderer {
                     letter-spacing: 0em;
                     text-align: left;
                     text-decoration: none;
-                    color: var(--black-700);
+                    color: var(--text-700);
                     display: inline-block;
                     position: relative;
                     margin-left: 4px;

@@ -39,7 +39,7 @@ class ContactSection extends TemplateRenderer {
                 line-height: 25px;
                 letter-spacing: 0em;
                 text-align: center;                
-                color: var(--black-700);
+                color: var(--text-700);
                 display: inline-block;
                 position: relative;
                 text-decoration: none;

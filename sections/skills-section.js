@@ -22,7 +22,7 @@ class SkillsSection extends TemplateRenderer {
             }
 
             .cursor {
-                background: var(--black-700);
+                background: var(--text-700);
                 display: inline-block;
 
                 height: 56px;

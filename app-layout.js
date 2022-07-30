@@ -5,7 +5,7 @@ import './sections/work-section.js';
 import './sections/skills-section.js';
 import './sections/about-section.js';
 import './sections/contact-section.js';
-
+import './components/copyright-info.js';
 class AppLayout extends TemplateRenderer {
     constructor() {
         super();
@@ -18,7 +18,7 @@ class AppLayout extends TemplateRenderer {
 
                 :host {
                     display: block;
-                    padding: 90px 250px;
+                    padding: 90px 250px 0px 250px;
                 }
         
             </style>
@@ -36,6 +36,8 @@ class AppLayout extends TemplateRenderer {
                 <about-section></about-section>
                 
                 <contact-section></contact-section>
+
+                <copyright-info></copyright-info>
             </div>
         `;
     }
