@@ -12,7 +12,7 @@ class SkillsSection extends TemplateRenderer {
 
             :host {
                 margin: 92px 60px 0 60px;
-
+                display: block;
             }
 
             h1 {
