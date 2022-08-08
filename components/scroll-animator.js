@@ -19,7 +19,6 @@ class ScrollAnimator extends TemplateRenderer {
         });
 
         const animatables = this.querySelectorAll('.animate');
-        console.log('Animatables', animatables);
         animatables.forEach(animatable => {
             observer.observe(animatable);
         });
