@@ -107,7 +107,7 @@ class SkillsSection extends TemplateRenderer {
         </div>
         
         <div class="content">
-            <div>
+            <div class="animate">
                 <h4>Advanced</h4>
                 <app-paper class="full-height">
                     <ul>
@@ -116,7 +116,7 @@ class SkillsSection extends TemplateRenderer {
                 </app-paper>
             </div>
             
-            <div>
+            <div class="animate">
                 <h4>Intermediate</h4>
                 <app-paper class="full-height">
                     <ul>
@@ -125,7 +125,7 @@ class SkillsSection extends TemplateRenderer {
                 </app-paper>
             </div>
             
-            <div>
+            <div class="animate">
                 <h4>Beginner</h4>
                 <app-paper>
                     <ul>

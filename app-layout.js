@@ -12,6 +12,27 @@ class AppLayout extends TemplateRenderer {
         this.noShadow = false;
     }
 
+    connectedCallback() {
+        super.connectedCallback();
+
+        const observer = new IntersectionObserver(observedEntries => {
+            observedEntries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    return;
+                }
+            });
+        });
+
+        const animatables = this.shadowRoot.querySelectorAll('.animate');
+        console.log('document', document.querySelectorAll('.animate'));
+        console.log('this.querySelectorAll', this.querySelectorAll('.animate'));
+
+        animatables.forEach(animatable => {
+            observer.observe(animatable);
+        });
+    }
+
     get template() {
         return `
             <style>
@@ -20,23 +41,33 @@ class AppLayout extends TemplateRenderer {
                     display: block;
                     padding: 90px 250px 0px 250px;
                 }
+
+                .animate {
+                    transition: all 1s ease-in-out;
+                    transform: translate3d(0px, 30px, 0);
+                    opacity: 0;
+                }
+                
+                .animate.active {
+                    transform: translate3d(0px, 0, 0);
+                    opacity: 1;
+                }                
         
             </style>
 
-            
-            <div>
-                <nav-bar></nav-bar>
+            <div>    
+                <nav-bar class="animate"></nav-bar>
                 
-                <home-section></home-section>
+                <home-section class="animate"></home-section>
 
-                <work-section></work-section>
+                <work-section class="animate"></work-section>
 
-                <skills-section></skills-section>
+                <skills-section class="animate"></skills-section>
 
-                <about-section></about-section>
+                <about-section class="animate"></about-section>
+
+                <contact-section class="animate"></contact-section>
                 
-                <contact-section></contact-section>
-
                 <copyright-info></copyright-info>
             </div>
         `;

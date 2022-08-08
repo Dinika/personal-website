@@ -18,6 +18,7 @@ class HomeSection extends TemplateRenderer {
             h1 {
                 font-family: 'Montserrat', sans-serif;
                 font-size: 64px;
+                font-weight: 800;
             }
 
             p {
