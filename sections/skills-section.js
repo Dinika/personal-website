@@ -1,5 +1,6 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
 import '../components/app-paper.js';
+import '../components/scroll-animator.js';
 import * as skills from '../data/skills.js';
 
 class SkillsSection extends TemplateRenderer {
@@ -106,42 +107,45 @@ class SkillsSection extends TemplateRenderer {
             <div class="cursor"></div>
         </div>
         
-        <div class="content">
-            <div class="animate">
-                <h4>Advanced</h4>
-                <app-paper class="full-height">
-                    <ul>
-                        ${this.skillsToListItems(skills.advanced)}
-                    </ul>
-                </app-paper>
-            </div>
-            
-            <div class="animate">
-                <h4>Intermediate</h4>
-                <app-paper class="full-height">
-                    <ul>
-                        ${this.skillsToListItems(skills.intermediate)}
-                    </ul>
-                </app-paper>
-            </div>
-            
-            <div class="animate">
-                <h4>Beginner</h4>
-                <app-paper>
-                    <ul>
-                        ${this.skillsToListItems(skills.beginner)}
-                    </ul>
-                </app-paper>
+        <scroll-animator>
+            <div class="content">
+                <div class="animate">
+                    <h4>Advanced</h4>
+                    <app-paper class="full-height">
+                        <ul>
+                            ${this.skillsToListItems(skills.advanced)}
+                        </ul>
+                    </app-paper>
+                </div>
+                
+                <div class="animate">
+                    <h4>Intermediate</h4>
+                    <app-paper class="full-height">
+                        <ul>
+                            ${this.skillsToListItems(skills.intermediate)}
+                        </ul>
+                    </app-paper>
+                </div>
+                
+                <div class="animate">
+                    <h4>Beginner</h4>
+                    <app-paper>
+                        <ul>
+                            ${this.skillsToListItems(skills.beginner)}
+                        </ul>
+                    </app-paper>
 
-                <h4 class="dev-env-header">Development Environment</h4>
-                <div class="dev-env-container">
-                    <ul>
-                        ${this.skillsToListItems(skills.devEnvironment)}
-                    </ul>
+                    <h4 class="dev-env-header">Development Environment</h4>
+                    <div class="dev-env-container">
+                        <ul>
+                            ${this.skillsToListItems(skills.devEnvironment)}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
+        </scroll-animator>
+
+        `;
     }
 
 }

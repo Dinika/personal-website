@@ -56,40 +56,48 @@ class AboutSection extends TemplateRenderer {
             About me.        
         </h1>
 
-        <div class="header">
-            <img src="../assets/not-a-robot.svg" title="Not a robot." />
-            <h4>Who am I?</h4>
-        </div>
-        <p>
-            I am a software engineer, specialized in full-stack web development. Currently, I am working at CERN with a group of really smart engineers,
-            managers, and physicists to develop services, applications, and APIs that are used for managing and smoothly opertating the LHC.
-            It is truly a humbling experience.
-        </p>
-        
-        <div class="header">
-            <img src="../assets/rainbows-and-sunshine.svg" title="Why git 'blame' though?" />
-            <h4>What kind of work do I enjoy?</h4>
-        </div>
-        <p>
-            I like spending time on improving the quality of engineering systems. I am always eager to improve and develop my team’s ability to provide reliable, high available software by using priciples of <span class="highlight">automated testing</span> and <span class="highlight">CI/CD</span>.
-        </p>
+        <scroll-animator>
+            <div class="animate">
+                <div class="header">
+                    <img src="../assets/not-a-robot.svg" title="Not a robot." />
+                    <h4>Who am I?</h4>
+                </div>
+                <p>
+                    I am a software engineer, specialized in full-stack web development. Currently, I am working at CERN with a group of really smart engineers,
+                    managers, and physicists to develop services, applications, and APIs that are used for managing and smoothly opertating the LHC.
+                    It is truly a humbling experience.
+                </p>
+            </div>
 
-        <p>
-            I like working in autonomous teams. I find <span class="highlight">pair-programming</span> and code-reviews fun and extremely helpful.
-        </p>
+            <div class="animate">
+                <div class="header">
+                    <img src="../assets/rainbows-and-sunshine.svg" title="Why git 'blame' though?" />
+                    <h4>What kind of work do I enjoy?</h4>
+                </div>
+                <p>
+                    I like spending time on improving the quality of engineering systems. I am always eager to improve and develop my team’s ability to provide reliable, high available software by using priciples of <span class="highlight">automated testing</span> and <span class="highlight">CI/CD</span>.
+                </p>
 
-        <p>
-            Finally, I like it when I have the opportunity to get <span class="highlight">involved in all stacks of feature development</span> - from user-requirements gathering, to architecture design, backend / frontend development, code-deployment, and finally assessing user-reactions. Not only is it a gratifying experience to be in touch with our users needs, I believe, it also helps me deliver better engineering solutions.
-        </p>
-        
-        
-        <div class="header">
-            <img src="../assets/cutie-patootie.svg" title="Wagwan?" />
-            <h4>What do I like to do in my free time?</h4>
-        </div>
-        <p>
-            I love playing with my dog - Sudo, dancing to hip-hop songs, playing FitXR on the oculus, listening to songs, walking around lakes and in parks, taking naps, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
-        </p>
+                <p>
+                    I like working in autonomous teams. I find <span class="highlight">pair-programming</span> and code-reviews fun and extremely helpful.
+                </p>
+
+                <p>
+                    Finally, I like it when I have the opportunity to get <span class="highlight">involved in all stacks of feature development</span> - from user-requirements gathering, to architecture design, backend / frontend development, code-deployment, and finally assessing user-reactions. Not only is it a gratifying experience to be in touch with our users needs, I believe, it also helps me deliver better engineering solutions.
+                </p>    
+            </div>
+
+            <div class="animate">
+                <div class="header">
+                    <img src="../assets/cutie-patootie.svg" title="Wagwan?" />
+                    <h4>What do I like to do in my free time?</h4>
+                </div>
+                <p>
+                    I love playing with my dog - Sudo, dancing to hip-hop songs, playing FitXR on the oculus, listening to songs, walking around lakes and in parks, taking naps, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
+                </p>
+            </div>
+
+        </scroll-animator>
         
     `;
     }

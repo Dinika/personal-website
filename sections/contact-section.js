@@ -1,5 +1,6 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
 import '../components/app-paper.js';
+import '../components/scroll-animator.js';
 
 class ContactSection extends TemplateRenderer {
 
@@ -103,20 +104,23 @@ class ContactSection extends TemplateRenderer {
             <img src="../assets/send-me-love.svg" title="(づ｡◕‿‿◕｡)づ - stranger danger"/>
         </div>
 
-        <app-paper>
-            <p>
-                Questions or Comments? I’d love to hear from you.
-            </p>
 
-            <p>Email me at 
-                <span class="copy-text">
-                    <a href="mailto:${this.emailId}" title="Opens your email client to write me an email">${this.emailId}</a>
-                    <button class="copy-button" onclick="navigator.clipboard.writeText('${this.emailId}')"><img src="../assets/copy.svg" title="Copy email id"/></button>
-                </span>
-            </p>
+        <scroll-animator>
+            <app-paper class="animate">
+                <p>
+                    Questions or Comments? I’d love to hear from you.
+                </p>
 
-            <p>You can also find me on <a href="https://linkedin.com/in/dinika-saxena">LinkedIn</a> or <a href="https://github.com/Dinika">GitHub</a>.</p>
-        </app-paper>
+                <p>Email me at 
+                    <span class="copy-text">
+                        <a href="mailto:${this.emailId}" title="Opens your email client to write me an email">${this.emailId}</a>
+                        <button class="copy-button" onclick="navigator.clipboard.writeText('${this.emailId}')"><img src="../assets/copy.svg" title="Copy email id"/></button>
+                    </span>
+                </p>
+
+                <p>You can also find me on <a href="https://linkedin.com/in/dinika-saxena">LinkedIn</a> or <a href="https://github.com/Dinika">GitHub</a>.</p>
+            </app-paper>
+        </scroll-animator>
     `;
     }
 
