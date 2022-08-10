@@ -12,8 +12,6 @@ class ScrollAnimator extends TemplateRenderer {
             observedEntries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                } else {
-                    entry.target.classList.remove('active');
                 }
             });
         });

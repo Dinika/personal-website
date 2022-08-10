@@ -27,6 +27,10 @@ class ProjectsByYear extends TemplateRenderer {
     get template() {
         return `
             <style>
+                :host {
+                    width: 100%;
+                }
+
                 .container, .y-axis, .project-details, .thumbnails {
                     display: flex;
                 }
@@ -34,6 +38,10 @@ class ProjectsByYear extends TemplateRenderer {
                 .y-axis-label {
                     display: flex;
                     align-items: center;
+                }
+
+                .graph-elements {
+                    flex: 1;
                 }
 
                 .y-axis-label h4 {
@@ -143,13 +151,25 @@ class ProjectsByYear extends TemplateRenderer {
                             <h4>${this.yearDetails.label}</h4>
                             <div class="marker"></div>
                         </div>                    
-                        
-                        <svg width="1" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0.5" y1="0.5" x2="0.499934" y2="1499.5" stroke="#106C4B" stroke-linecap="square" stroke-dasharray="3 3"/>
-                        </svg>
+                        <svg
+                        width="1.0134217"
+                        height="100%"
+                        version="1.1"
+                        id="svg5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:svg="http://www.w3.org/2000/svg">
+                       <g
+                          id="layer1"
+                          transform="translate(-101.83907,-1.5801605)">
+                         <path
+                            style="fill:none;stroke:#106c4b;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
+                            d="M 101.97136,1.5801605 V 264.28019 l 0.007,0.0312"
+                            id="path1472" />
+                       </g>
+                     </svg>
                     </div>
 
-                    <div>
+                    <div class="graph-elements">
                         <div class="project-details">
                             <div class="headers">
                                 <h3>Work Projects</h3>

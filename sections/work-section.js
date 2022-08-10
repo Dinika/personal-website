@@ -18,10 +18,10 @@ class WorkSection extends TemplateRenderer {
 
             :host {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
                 margin: 92px 60px 0 0px;
-
             }
 
         </style>
