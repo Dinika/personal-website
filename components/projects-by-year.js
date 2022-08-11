@@ -24,35 +24,15 @@ class ProjectsByYear extends TemplateRenderer {
 
     connectedCallback() {
         super.connectedCallback();
-        // this.scrollYAxis()
     }
 
     #scaleYAxisToGraphHeight() {
         const height = this.getBoundingClientRect().height;
         console.log('height', height)
         const yAxis = this.shadowRoot.querySelector('svg');
-        // yAxis.setAttribute('viewBox', '0 0 0.2 ' + height);
+        yAxis.setAttribute('viewBox', '0 0 0.2 ' + height);
         yAxis.setAttribute('height', '' + height);
-        console.log(yAxis)
-        this.render()
 
-    }
-
-    scrollYAxis() {
-        const thePath = this.shadowRoot.querySelector('#thePath');
-        const mask1 = this.shadowRoot.querySelector('#mask1');
-        var l = thePath.getTotalLength();
-        var dasharray = l;
-        mask1.style.strokeDasharray = dasharray;
-        var dashoffset = l;
-        mask1.style.strokeDashoffset = dashoffset;
-        this.addEventListener("scroll", function () {
-
-            dashoffset =
-                l - this.scrollTop * l / (this.scrollHeight - this.clientHeight);
-
-            mask1.style.strokeDashoffset = dashoffset;
-        });
     }
 
     toProjectThumbnails = (projects) => projects
@@ -75,6 +55,7 @@ class ProjectsByYear extends TemplateRenderer {
                 .y-axis-label {
                     display: flex;
                     align-items: center;
+                    flex: 1;
                 }
 
                 .graph-elements {
@@ -173,14 +154,11 @@ class ProjectsByYear extends TemplateRenderer {
                     width: 0;
                   }
 
-                a:hover:after { 
+                  a:hover:after { 
                     width: 100%; 
                     left: 0; 
-                } 
+                  } 
 
-                use{fill:none;}
-                path{stroke-width:3px;}
-                #mask{stroke:white}
             </style>
 
             ${this.yearDetails ? `
@@ -192,18 +170,8 @@ class ProjectsByYear extends TemplateRenderer {
                             <div class="marker"></div>
                         </div> 
                                           
-                        <svg id="svg" width="1">
-
-                            <defs>
-                                <path id="thePath" d="m 0.5,0.5 -1.8e-5,403" />
-                    
-                                <mask id="mask1">
-                                    <use id="mask" xlink:href="#thePath" />
-                                </mask>
-                    
-                            </defs>
-                            <use xlink:href="#thePath" stroke-dasharray="3 3" stroke="black" mask="url(#mask1)" />
-                    
+                        <svg width="1">
+                            <line x1="0.5" y1="0.5" x2="0.499982" y2="100%" stroke="#106C4B" stroke-linecap="square" stroke-dasharray="3 3"/>
                         </svg>
                     
                     </div>
