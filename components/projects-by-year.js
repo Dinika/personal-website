@@ -16,6 +16,43 @@ class ProjectsByYear extends TemplateRenderer {
         }
 
         this.render();
+
+        if (newValue != null) {
+            this.#scaleYAxisToGraphHeight();
+        }
+    }
+
+    connectedCallback() {
+        super.connectedCallback();
+        // this.scrollYAxis()
+    }
+
+    #scaleYAxisToGraphHeight() {
+        const height = this.getBoundingClientRect().height;
+        console.log('height', height)
+        const yAxis = this.shadowRoot.querySelector('svg');
+        // yAxis.setAttribute('viewBox', '0 0 0.2 ' + height);
+        yAxis.setAttribute('height', '' + height);
+        console.log(yAxis)
+        this.render()
+
+    }
+
+    scrollYAxis() {
+        const thePath = this.shadowRoot.querySelector('#thePath');
+        const mask1 = this.shadowRoot.querySelector('#mask1');
+        var l = thePath.getTotalLength();
+        var dasharray = l;
+        mask1.style.strokeDasharray = dasharray;
+        var dashoffset = l;
+        mask1.style.strokeDashoffset = dashoffset;
+        this.addEventListener("scroll", function () {
+
+            dashoffset =
+                l - this.scrollTop * l / (this.scrollHeight - this.clientHeight);
+
+            mask1.style.strokeDashoffset = dashoffset;
+        });
     }
 
     toProjectThumbnails = (projects) => projects
@@ -136,11 +173,14 @@ class ProjectsByYear extends TemplateRenderer {
                     width: 0;
                   }
 
-                  a:hover:after { 
+                a:hover:after { 
                     width: 100%; 
                     left: 0; 
-                  } 
+                } 
 
+                use{fill:none;}
+                path{stroke-width:3px;}
+                #mask{stroke:white}
             </style>
 
             ${this.yearDetails ? `
@@ -150,23 +190,22 @@ class ProjectsByYear extends TemplateRenderer {
                         <div class="y-axis-label">
                             <h4>${this.yearDetails.label}</h4>
                             <div class="marker"></div>
-                        </div>                    
-                        <svg
-                        width="1.0134217"
-                        height="100%"
-                        version="1.1"
-                        id="svg5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:svg="http://www.w3.org/2000/svg">
-                       <g
-                          id="layer1"
-                          transform="translate(-101.83907,-1.5801605)">
-                         <path
-                            style="fill:none;stroke:#106c4b;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
-                            d="M 101.97136,1.5801605 V 264.28019 l 0.007,0.0312"
-                            id="path1472" />
-                       </g>
-                     </svg>
+                        </div> 
+                                          
+                        <svg id="svg" width="1">
+
+                            <defs>
+                                <path id="thePath" d="m 0.5,0.5 -1.8e-5,403" />
+                    
+                                <mask id="mask1">
+                                    <use id="mask" xlink:href="#thePath" />
+                                </mask>
+                    
+                            </defs>
+                            <use xlink:href="#thePath" stroke-dasharray="3 3" stroke="black" mask="url(#mask1)" />
+                    
+                        </svg>
+                    
                     </div>
 
                     <div class="graph-elements">

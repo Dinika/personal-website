@@ -10,7 +10,7 @@ class WorkSection extends TemplateRenderer {
             ${yearDetailsComponent.yearDetailsAttrName}="${toComponentArgs(yearDetails)}">
         </projects-by-year>
         `
-    ));
+    )).join('');
 
     get template() {
         return `

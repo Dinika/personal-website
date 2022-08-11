@@ -1,0 +1,32 @@
+<div id="wrap">
+    <svg id="svg" width="100" viewBox="0 0 78.571 753.021">
+
+        <defs>
+            <path id="thePath" d="M46.249,7c0,0-37.5,0-37.5,32.812s20.312,56.25,37.5,75
+        s23.881,51.525,6.25,73.438c-31.43,39.062,21.875,43.882,18.75,70.378s-35.938,63.997-45.312,90.559s17.08,37.5,23.438,81.25
+        s-23.438,75-18.75,118.75s45.312,75,26.562,103.125s-51.812,83.438-50.125,100" />
+
+            <mask id="mask1">
+                <use id="mask" xlink:href="#thePath" />
+            </mask>
+
+        </defs>
+        <use xlink:href="#thePath" stroke-dasharray="10 10" stroke="black" mask="url(#mask1)" />
+
+    </svg>
+</div>
+<div id="wrap">
+    <svg width="1" height="389" viewBox="0 0 1 389">
+
+        <defs>
+            <path id="thePath" style="stroke:#106c4b;stroke-linecap:square;stroke-dasharray:3, 3" d="m 0.5,0.5 -1.8e-5,403" />
+
+            <mask id="mask1">
+                <use id="mask" xlink:href="#thePath" />
+            </mask>
+
+        </defs>
+        <use xlink:href="#thePath" stroke-dasharray="10 10" stroke="black" mask="url(#mask1)" />
+
+    </svg>
+</div>
