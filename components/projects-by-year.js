@@ -9,6 +9,8 @@ class ProjectsByYear extends TemplateRenderer {
         return [yearDetailsAttrName];
     }
 
+    yAxisLength;
+
     attributeChangedCallback(attrName, newValue) {
         if (attrName === yearDetailsAttrName) {
             this.yearDetails = JSON.parse(decodeURIComponent(newValue));
@@ -19,20 +21,45 @@ class ProjectsByYear extends TemplateRenderer {
 
         if (newValue != null) {
             this.#scaleYAxisToGraphHeight();
+            this.#scrollYAxis();
         }
     }
 
     connectedCallback() {
         super.connectedCallback();
+        this.shadowRoot.addEventListener("wheel", () => {
+            console.log('scroll');
+            if (!this.yAxisLength) {
+                return;
+            }
+            const mask = this.shadowRoot.querySelector('#mask');
+            const dashoffset =
+                this.yAxisLength - this.shadowRoot.scrollTop * this.yAxisLength / (this.shadowRoot.scrollHeight - this.clientHeight);
+
+            console.log('dashboad', dashoffset);
+            console.log('scrrollTop', this.scrollTop);
+
+            mask.style.strokeDashoffset = '' + dashoffset;
+        });
+
     }
 
     #scaleYAxisToGraphHeight() {
         const height = this.getBoundingClientRect().height;
         console.log('height', height)
         const yAxis = this.shadowRoot.querySelector('svg');
-        yAxis.setAttribute('viewBox', '0 0 0.2 ' + height);
         yAxis.setAttribute('height', '' + height);
+    }
 
+    #scrollYAxis() {
+        const thePath = this.shadowRoot.querySelector('#thePath');
+        const mask = this.shadowRoot.querySelector('#mask');
+        this.yAxisLength = thePath.getTotalLength();
+        console.log('yAxisLength', this.yAxisLength)
+        var dasharray = this.yAxisLength;
+        mask.style.strokeDasharray = dasharray;
+        var dashoffset = this.yAxisLength;
+        mask.style.strokeDashoffset = dashoffset;
     }
 
     toProjectThumbnails = (projects) => projects
@@ -159,6 +186,8 @@ class ProjectsByYear extends TemplateRenderer {
                     left: 0; 
                   } 
 
+                  use{fill:none;}
+                  #mask{stroke:white}
             </style>
 
             ${this.yearDetails ? `
@@ -171,7 +200,15 @@ class ProjectsByYear extends TemplateRenderer {
                         </div> 
                                           
                         <svg width="1">
-                            <line x1="0.5" y1="0.5" x2="0.499982" y2="100%" stroke="#106C4B" stroke-linecap="square" stroke-dasharray="3 3"/>
+                            <defs>
+
+                                <line id="thePath" x1="0.5" y1="0.5" x2="0.499982" y2="100%"/>
+                                <mask id="mask1">
+                                    <use id="mask" xlink:href="#thePath" />
+                                </mask>
+    
+                            </defs>
+                            <use xlink:href="#thePath" stroke-dasharray="3 3" stroke="red"  mask="url(#mask1)" /> 
                         </svg>
                     
                     </div>
