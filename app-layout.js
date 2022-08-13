@@ -10,6 +10,10 @@ import './components/scroll-animator.js';
 
 class AppLayout extends TemplateRenderer {
 
+    connectedCallback() {
+        super.connectedCallback();
+    }
+
     get template() {
         return `
             <style>
@@ -17,6 +21,7 @@ class AppLayout extends TemplateRenderer {
                 :host {
                     display: block;
                     padding: 90px 250px 0px 250px;
+                    
                 }
         
             </style>

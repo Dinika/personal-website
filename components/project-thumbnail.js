@@ -35,7 +35,7 @@ class ProjectThumbnail extends TemplateRenderer {
                     justify-content: center;
                     padding-left: 24px;
                     box-sizing: border-box;
-                    margin: 40px 40px;
+                    margin: 30px 30px;
                     cursor: pointer;
                     z-index: 0;
                 }

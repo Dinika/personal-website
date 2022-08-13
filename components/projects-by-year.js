@@ -1,5 +1,6 @@
 import { TemplateRenderer } from "../utils/TemplateRenderer.js";
 import './project-thumbnail.js';
+import './scroll-animator.js';
 
 export const yearDetailsAttrName = 'yeardetails';
 
@@ -9,62 +10,19 @@ class ProjectsByYear extends TemplateRenderer {
         return [yearDetailsAttrName];
     }
 
-    yAxisLength;
-
     attributeChangedCallback(attrName, newValue) {
         if (attrName === yearDetailsAttrName) {
             this.yearDetails = JSON.parse(decodeURIComponent(newValue));
             this.removeAttribute(yearDetailsAttrName);
-        }
-
-        this.render();
-
-        if (newValue != null) {
-            this.#scaleYAxisToGraphHeight();
-            this.#scrollYAxis();
-        }
-    }
-
-    connectedCallback() {
-        super.connectedCallback();
-        this.shadowRoot.addEventListener("wheel", () => {
-            console.log('scroll');
-            if (!this.yAxisLength) {
-                return;
+            if (newValue != null) {
+                this.render();
             }
-            const mask = this.shadowRoot.querySelector('#mask');
-            const dashoffset =
-                this.yAxisLength - this.shadowRoot.scrollTop * this.yAxisLength / (this.shadowRoot.scrollHeight - this.clientHeight);
-
-            console.log('dashboad', dashoffset);
-            console.log('scrrollTop', this.scrollTop);
-
-            mask.style.strokeDashoffset = '' + dashoffset;
-        });
-
-    }
-
-    #scaleYAxisToGraphHeight() {
-        const height = this.getBoundingClientRect().height;
-        console.log('height', height)
-        const yAxis = this.shadowRoot.querySelector('svg');
-        yAxis.setAttribute('height', '' + height);
-    }
-
-    #scrollYAxis() {
-        const thePath = this.shadowRoot.querySelector('#thePath');
-        const mask = this.shadowRoot.querySelector('#mask');
-        this.yAxisLength = thePath.getTotalLength();
-        console.log('yAxisLength', this.yAxisLength)
-        var dasharray = this.yAxisLength;
-        mask.style.strokeDasharray = dasharray;
-        var dashoffset = this.yAxisLength;
-        mask.style.strokeDashoffset = dashoffset;
+        }
     }
 
     toProjectThumbnails = (projects) => projects
         .map(p => `
-            <project-thumbnail project="${encodeURIComponent(JSON.stringify(p))}"></project-thumbnail>
+            <project-thumbnail class="horizontal-animate" project="${encodeURIComponent(JSON.stringify(p))}"></project-thumbnail>
         `)
         .join('');
 
@@ -75,17 +33,18 @@ class ProjectsByYear extends TemplateRenderer {
                     width: 100%;
                 }
 
-                .container, .y-axis, .project-details, .thumbnails {
+                .container, .project-details, .thumbnails {
                     display: flex;
                 }
 
                 .y-axis-label {
                     display: flex;
                     align-items: center;
-                    flex: 1;
+                    margin-left: -50px;
                 }
 
                 .graph-elements {
+                    margin-left: 20px;
                     flex: 1;
                 }
 
@@ -102,7 +61,7 @@ class ProjectsByYear extends TemplateRenderer {
                     letter-spacing: 0em;
                 }
 
-                .y-axis .marker {
+                .y-axis-label .marker {
                     width: 16px;
                     height: 16px;
                     background: black;
@@ -186,35 +145,21 @@ class ProjectsByYear extends TemplateRenderer {
                     left: 0; 
                   } 
 
-                  use{fill:none;}
-                  #mask{stroke:white}
+                  project-thumbnail {
+                    opacity: 0;
+                  }
             </style>
 
             ${this.yearDetails ? `
                 <div class="container">
 
-                    <div class="y-axis">
-                        <div class="y-axis-label">
-                            <h4>${this.yearDetails.label}</h4>
-                            <div class="marker"></div>
-                        </div> 
-                                          
-                        <svg width="1">
-                            <defs>
+                    <div class="y-axis-label">
+                        <h4>${this.yearDetails.label}</h4>
+                        <div class="marker"></div>
+                    </div>                    
 
-                                <line id="thePath" x1="0.5" y1="0.5" x2="0.499982" y2="100%"/>
-                                <mask id="mask1">
-                                    <use id="mask" xlink:href="#thePath" />
-                                </mask>
-    
-                            </defs>
-                            <use xlink:href="#thePath" stroke-dasharray="3 3" stroke="red"  mask="url(#mask1)" /> 
-                        </svg>
-                    
-                    </div>
-
-                    <div class="graph-elements">
-                        <div class="project-details">
+                    <scroll-animator class="graph-elements horizontal">
+                        <div class="project-details animate">
                             <div class="headers">
                                 <h3>Work Projects</h3>
 
@@ -229,7 +174,7 @@ class ProjectsByYear extends TemplateRenderer {
                             </div>
                         </div>
 
-                        <div class="project-details personal-projects">
+                        <div class="project-details personal-projects animate">                            
                             <div class="headers">
                                 <h3>Personal Projects</h3>
 
@@ -243,7 +188,7 @@ class ProjectsByYear extends TemplateRenderer {
                                 ${this.toProjectThumbnails(this.yearDetails.personal.projects)}
                             </div>
                         </div>
-                    </div>
+                    </scroll-animator>
                 </div>            
                 ` : ''
             }

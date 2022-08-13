@@ -87,6 +87,10 @@ class SkillsSection extends TemplateRenderer {
                 padding-left: 20px;
             }
 
+            .horizontal-animate {
+                opacity: 0;
+            }
+
             @keyframes cursorAnimate {
                 from {
                     opacity: 0;
@@ -107,9 +111,9 @@ class SkillsSection extends TemplateRenderer {
             <div class="cursor"></div>
         </div>
         
-        <scroll-animator>
+        <scroll-animator class="horizontal">
             <div class="content">
-                <div class="animate">
+                <div class="animate horizontal-animate">
                     <h4>Advanced</h4>
                     <app-paper class="full-height">
                         <ul>
@@ -118,7 +122,7 @@ class SkillsSection extends TemplateRenderer {
                     </app-paper>
                 </div>
                 
-                <div class="animate">
+                <div class="animate horizontal-animate">
                     <h4>Intermediate</h4>
                     <app-paper class="full-height">
                         <ul>
@@ -127,7 +131,7 @@ class SkillsSection extends TemplateRenderer {
                     </app-paper>
                 </div>
                 
-                <div class="animate">
+                <div class="animate horizontal-animate">
                     <h4>Beginner</h4>
                     <app-paper>
                         <ul>
