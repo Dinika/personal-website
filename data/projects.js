@@ -141,6 +141,18 @@ export const projects = {
                     description: 'Dashboard to monitor statistics on exceptions that occur during migration of data from legacy system.',
                     link: ''
                 },
+                {
+                    name: 'Record Editor',
+                    role: 'Junior Developer',
+                    description: 'An editting application used by curators to standardize High Energy Physics articles before publishing them.',
+                    link: ''
+                },
+                {
+                    name: 'Holding Pen',
+                    role: 'Junior Developer',
+                    description: 'A dashboard used by curators to categorize incoming High Energy Physics (HEP) papers and reports.',
+                    link: ''
+                },
             ]
         },
         'personal': {
@@ -150,6 +162,18 @@ export const projects = {
                     name: 'React Boilerplate',
                     role: 'Developer',
                     description: 'A bioler plate for starting react applications with linters, formatters, testing libraries, and more.',
+                    link: ''
+                },
+                {
+                    name: 'City Today',
+                    role: 'Developer',
+                    description: 'A web-app that used Google Street View, NY Times, and the MediaWiki APIs to display articles for a given city',
+                    link: ''
+                },
+                {
+                    name: 'Build A Burger',
+                    role: 'Developer',
+                    description: ' A full-stack web application that lets authenticated users customize and order their burgers!',
                     link: ''
                 },
             ]
@@ -164,18 +188,30 @@ export const projects = {
                 {
                     name: 'Beyonce',
                     role: 'Intern',
-                    description: 'Dashboard that visualized the hierarchy of cloud resources at CERN',
+                    description: 'Dashboard that visualized the hierarchy of cloud resources at CERN.',
+                    link: ''
+                },
+                {
+                    name: 'Interactive Map of the World',
+                    role: 'Intern',
+                    description: 'An Interactive visualization of the world that for earthquakes that had ocurred in the last 100 years.',
+                    link: ''
+                },
+                {
+                    name: 'LHC Map',
+                    role: 'Developer',
+                    description: 'An interactive map of the LHC and its various experiments.',
                     link: ''
                 },
             ]
         },
         'personal': {
-            location: 'Delhi, India',
+            location: 'University of Delhi, India',
             projects: [
                 {
-                    name: 'LHC Map',
+                    name: 'Vanilla Private Cloud',
                     role: 'Developer',
-                    description: 'An interactive map of the LHC and its various experiments.',
+                    description: 'Vanilla version of private cloud using Eucalyptus on CentOS environment',
                     link: ''
                 },
                 {
@@ -194,6 +230,18 @@ export const projects = {
                     name: 'Health Buddy',
                     role: 'Developer',
                     description: 'Android application to track nutritional intake',
+                    link: ''
+                },
+                {
+                    name: 'NCAECA Website',
+                    role: 'Intern',
+                    description: 'Website for the National Conference of Advancements in Electrical and Computer Applications.',
+                    link: ''
+                },
+                {
+                    name: 'Quantum Key Distribution',
+                    role: 'Intern',
+                    description: 'Paper on application of Quantum Physics in secure transmission of public and private keys.',
                     link: ''
                 },
             ]
