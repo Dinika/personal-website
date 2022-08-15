@@ -1,5 +1,6 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
 import './app-paper.js';
+import './project-dialog.js';
 
 class ProjectThumbnail extends TemplateRenderer {
 
@@ -17,10 +18,9 @@ class ProjectThumbnail extends TemplateRenderer {
 
     connectedCallback() {
         super.connectedCallback();
-        this.addEventListener('click', () => {
-            console.log("CLick");
-            this.dispatchEvent(new CustomEvent('openDialog', { detail: this.project?.description, bubbles: true, composed: true }))
-        })
+        this.addEventListener('click', (event) => {
+            this.shadowRoot.querySelector('project-dialog').open(this.project?.description);
+        });
     }
 
     get template() {
@@ -135,6 +135,7 @@ class ProjectThumbnail extends TemplateRenderer {
                         <p class="description hidden-until-hover">${this.project.description}</p>
                         <a class="more hidden-until-hover">More</a>
                     </div>
+                    <project-dialog></project-dialog>
                     `
                 : ''
             }

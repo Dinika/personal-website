@@ -217,7 +217,7 @@ export const projects = {
                 {
                     name: 'Optimizing CRP of Websites',
                     role: 'Research Member',
-                    description: 'A research project on how to optimize the critical rendering paths of websites.',
+                    description: 'A research project on optimizing the critical rendering paths of websites.',
                     link: ''
                 },
                 {
