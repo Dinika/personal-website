@@ -18,6 +18,7 @@ class ProjectThumbnail extends TemplateRenderer {
     connectedCallback() {
         super.connectedCallback();
         this.addEventListener('click', () => {
+            console.log("CLick");
             this.dispatchEvent(new CustomEvent('openDialog', { detail: this.project?.description, bubbles: true, composed: true }))
         })
     }
