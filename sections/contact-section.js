@@ -101,7 +101,7 @@ class ContactSection extends TemplateRenderer {
         
         <div class="header">
             <h1>Get in touch</h1>
-            <img src="../assets/send-me-love.svg" title="(づ｡◕‿‿◕｡)づ - stranger danger"/>
+            <img src="https://dinika.github.io/personal-website/assets/send-me-love.svg" title="(づ｡◕‿‿◕｡)づ - stranger danger"/>
         </div>
 
 
@@ -114,7 +114,7 @@ class ContactSection extends TemplateRenderer {
                 <p>Email me at 
                     <span class="copy-text">
                         <a href="mailto:${this.emailId}" title="Opens your email client to write me an email">${this.emailId}</a>
-                        <button class="copy-button" onclick="navigator.clipboard.writeText('${this.emailId}')"><img src="../assets/copy.svg" title="Copy email id"/></button>
+                        <button class="copy-button" onclick="navigator.clipboard.writeText('${this.emailId}')"><img src="https://dinika.github.io/personal-website/assets/copy.svg" title="Copy email id"/></button>
                     </span>
                 </p>
 

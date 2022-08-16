@@ -59,7 +59,7 @@ class AboutSection extends TemplateRenderer {
         <scroll-animator>
             <div class="animate">
                 <div class="header">
-                    <img src="../assets/not-a-robot.svg" title="Not a robot." />
+                    <img src="https://dinika.github.io/personal-website/assets/not-a-robot.svg" title="Not a robot." />
                     <h4>Who am I?</h4>
                 </div>
                 <p>
@@ -71,7 +71,7 @@ class AboutSection extends TemplateRenderer {
 
             <div class="animate">
                 <div class="header">
-                    <img src="../assets/rainbows-and-sunshine.svg" title="Why git 'blame' though?" />
+                    <img src="https://dinika.github.io/personal-website/assets/rainbows-and-sunshine.svg" title="Why git 'blame' though?" />
                     <h4>What kind of work do I enjoy?</h4>
                 </div>
                 <p>
@@ -89,7 +89,7 @@ class AboutSection extends TemplateRenderer {
 
             <div class="animate">
                 <div class="header">
-                    <img src="../assets/cutie-patootie.svg" title="Wagwan?" />
+                    <img src="https://dinika.github.io/personal-website/assets/cutie-patootie.svg" title="Wagwan?" />
                     <h4>What do I like to do in my free time?</h4>
                 </div>
                 <p>
