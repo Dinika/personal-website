@@ -20,9 +20,9 @@ class ProjectsByYear extends TemplateRenderer {
         }
     }
 
-    toProjectThumbnails = (projects) => projects
+    toProjectThumbnails = (projects, location) => projects
         .map(p => `
-            <project-thumbnail class="horizontal-animate" project="${encodeURIComponent(JSON.stringify(p))}"></project-thumbnail>
+            <project-thumbnail class="horizontal-animate" project="${encodeURIComponent(JSON.stringify({ ...p, location }))}"></project-thumbnail>
         `)
         .join('');
 
@@ -107,9 +107,33 @@ class ProjectsByYear extends TemplateRenderer {
                     flex-wrap: wrap;
                 }
 
-                .location {
+                .subheader {
                     display: flex;
-                    align-items: flex-start;
+                    margin-top: 4px;
+                    align-items: center;
+                    font-size: 16px;
+                }
+
+                .subheader img {
+                    width: 16px;
+                    height: 16px;
+                    margin-top: -6px;
+                }
+
+                .designation {
+                    margin: 0 4px 0 0;
+                    font-weight: 700;
+                    font-size: 16px;
+
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    text-decoration: none;
+                    color: var(--text-700);
+                    display: inline-block;
+                    position: relative;
+                    margin-left: 4px;
+                    padding-bottom: 8px;
                 }
 
                 a {
@@ -120,7 +144,7 @@ class ProjectsByYear extends TemplateRenderer {
                     letter-spacing: 0em;
                     text-align: left;
                     text-decoration: none;
-                    color: var(--text-700);
+                    color: var(--primary-500);
                     display: inline-block;
                     position: relative;
                     margin-left: 4px;
@@ -163,14 +187,15 @@ class ProjectsByYear extends TemplateRenderer {
                             <div class="headers">
                                 <h3>Work Projects</h3>
 
-                                <div class="location">
-                                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
-                                    <a href="${this.yearDetails.work.link}">${this.yearDetails.work.location}</a>
+                                <div class="subheader">
+                                    <h5 class="designation">${this.yearDetails.work.designation}</h5>
+                                    <img src="../assets/map-marker.svg" />
+                                    <a href="${this.yearDetails.work.location.link}">${this.yearDetails.work.location.label}</a>
                                 </div>
                             </div>
 
                             <div class="thumbnails">
-                                ${this.toProjectThumbnails(this.yearDetails.work.projects)}
+                                ${this.toProjectThumbnails(this.yearDetails.work.projects, this.yearDetails.work.location)}
                             </div>
                         </div>
 
@@ -178,14 +203,14 @@ class ProjectsByYear extends TemplateRenderer {
                             <div class="headers">
                                 <h3>Personal Projects</h3>
 
-                                <div class="location">
-                                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
-                                    <a>${this.yearDetails.personal.location}</a>
+                                <div class="subheader">
+                                    <img src="../assets/map-marker.svg" />
+                                    <a href="${this.yearDetails.personal.location.link}">${this.yearDetails.personal.location.label}</a>
                                 </div>
                             </div>
 
                             <div class="thumbnails">
-                                ${this.toProjectThumbnails(this.yearDetails.personal.projects)}
+                                ${this.toProjectThumbnails(this.yearDetails.personal.projects, this.yearDetails.personal.location)}
                             </div>
                         </div>
                     </scroll-animator>

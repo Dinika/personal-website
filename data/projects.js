@@ -2,123 +2,136 @@ export const projects = {
     'Oct 2021 - now': {
         'label': 'Oct 2021 - now',
         'work': {
-            location: 'CERN, Switzerland & France',
-            link: 'https://www.home.cern/',
+            location: {
+                label: 'CERN, Switzerland & France',
+                link: 'https://www.home.cern/',
+            },
+            designation: 'Software Engineer (Fellow)',
             projects: [
                 {
                     name: 'WRAP',
                     role: 'Developer',
                     description: 'A figma like app that allows users to design dashboards that can subscribe to several devices in LHC.',
-                    link: ''
+                    id: '32'
                 },
                 {
                     name: 'HelpAlarm',
                     role: 'Lead Developer',
                     description: 'Application used at the CCC to observe and manage alarms around CERN.',
-                    link: ''
+                    id: '31'
                 },
                 {
                     name: 'ACW',
                     role: 'Developer',
                     description: 'Java and JS framework used to power all the GUI applications in our section.',
-                    link: ''
+                    id: '30'
                 },
                 {
                     name: 'TI Logbook',
                     role: 'Tech Lead',
                     description: 'Applications used by operators to manage events, work-orders, calls, and more around the LHC.',
-                    link: ''
+                    id: '29'
                 },
                 {
                     name: 'LHC Checklist',
                     role: 'Developer',
                     description: 'Used to test machines before the start of the LHC runs.',
-                    link: ''
+                    id: '28'
                 },
                 {
                     name: 'ASM',
                     role: 'Platform Engineer',
                     description: 'Used to schedule different operations and runs on the LHC.',
-                    link: ''
+                    id: '27'
                 }
             ]
         },
         'personal': {
-            location: 'Prevessin Moens, France',
+            location: {
+                label: 'Prevessin Moens, France',
+                link: 'https://en.wikipedia.org/wiki/Pr%C3%A9vessin-Mo%C3%ABns',
+            },
             projects: [
                 {
                     name: 'Expenses',
                     role: 'Developer',
                     description: 'Application that monitors monthly expenses and splits the costs between users.',
-                    link: ''
+                    id: '26'
                 },
                 {
                     name: 'Home Cluster',
                     role: 'Contributor',
                     description: 'Ansible playbooks and bash scripts used to manage smart home devices.',
-                    link: ''
+                    id: '25'
                 },
                 {
                     name: 'Jenkins to Gitlab CI',
                     role: 'Developer',
                     description: 'Migrating jenkins pipelines to test and deploy applications to Gitlab CI/CD',
-                    link: ''
+                    id: '24'
                 },
                 {
                     name: 'Personal Website',
                     role: 'Developer',
                     description: 'My portfolio :)',
-                    link: ''
+                    id: '23'
                 },
             ]
         }
     },
     'May 2019 - July 2020': {
         'label': 'May 2019 - July 2020',
+
         'work': {
-            location: 'Minna Technologies, Sweden',
-            link: 'https://minnatechnologies.com/',
+            location: {
+                label: 'Minna Technologies, Sweden',
+                link: 'https://minnatechnologies.com/',
+            },
+            designation: 'Software Engineer',
             projects: [
                 {
                     name: 'Insights',
                     role: 'Lead Developer',
                     description: 'Feature integrated in partner bank applications to show users statistics on their subscriptions.',
-                    link: ''
+                    id: '22'
                 },
                 {
                     name: 'Market Setup',
                     role: 'Developer',
                     description: 'Setup servers and databases to operate in the new markets of Belgium and Denmark.',
-                    link: ''
+                    id: '21'
                 },
                 {
                     name: 'Testing Frameworks',
                     role: 'Contributor',
                     description: 'Contributed in the research and setup of libraries and conventions to unit test our frontend code.',
-                    link: ''
+                    id: '20'
                 },
                 {
                     name: 'Overview in Minna',
                     role: 'Developer',
                     description: 'Feature in the application that gives users a quick summary of important aspects of their subscription economy.',
-                    link: ''
+                    id: '19'
                 },
             ]
         },
         'personal': {
-            location: 'Gothenburg, Sweden',
+            location: {
+                label: 'Gothenburg, Sweden',
+                link: 'https://en.wikipedia.org/wiki/Gothenburg'
+            },
             projects: [
                 {
                     name: 'Tab Notes',
                     role: 'Developer',
                     description: 'A browser extension that uses flashcards to help memorize notes.',
-                    link: ''
+                    id: '18'
                 },
                 {
                     name: 'Blog Posts',
                     role: 'Developer',
                     description: 'A simple blogging application using GraphQL, Node, Express, and SocketIO.',
-                    link: ''
+                    id: '17'
                 },
             ]
         }
@@ -126,55 +139,61 @@ export const projects = {
     'Sept-2017 - Oct-2018': {
         'label': 'Sept-2017 - Oct-2018',
         'work': {
-            location: 'CERN, Switzerland & France',
-            link: 'https://www.home.cern/',
+            location: {
+                label: 'CERN, Switzerland & France',
+                link: 'https://www.home.cern/',
+            },
+            designation: 'Junior Software Engineer (Technical Student)',
             projects: [
                 {
                     name: 'Inspire-hep',
                     role: 'Junior Developer',
                     description: 'Web application that publishes open articles, jobs, conferences etc for the High Energy Physics community.',
-                    link: ''
+                    id: '16'
                 },
                 {
                     name: 'Exceptions Dashboard',
                     role: 'Developer',
                     description: 'Dashboard to monitor statistics on exceptions that occur during migration of data from legacy system.',
-                    link: ''
+                    id: '15'
                 },
                 {
                     name: 'Record Editor',
                     role: 'Junior Developer',
                     description: 'An editting application used by curators to standardize High Energy Physics articles before publishing them.',
-                    link: ''
+                    id: '14'
                 },
                 {
                     name: 'Holding Pen',
                     role: 'Junior Developer',
                     description: 'A dashboard used by curators to categorize incoming High Energy Physics (HEP) papers and reports.',
-                    link: ''
+                    id: '13'
                 },
             ]
         },
         'personal': {
-            location: 'Thoiry, France',
+            location: {
+                label: 'Thoiry, France',
+                link: 'https://en.wikipedia.org/wiki/Thoiry,_Ain'
+            },
             projects: [
                 {
                     name: 'React Boilerplate',
                     role: 'Developer',
                     description: 'A bioler plate for starting react applications with linters, formatters, testing libraries, and more.',
-                    link: ''
+                    id: '12'
                 },
                 {
                     name: 'City Today',
                     role: 'Developer',
                     description: 'A web-app that used Google Street View, NY Times, and the MediaWiki APIs to display articles for a given city',
-                    link: ''
+                    id: '11'
                 },
                 {
                     name: 'Build A Burger',
                     role: 'Developer',
                     description: ' A full-stack web application that lets authenticated users customize and order their burgers!',
-                    link: ''
+                    id: '10'
                 },
             ]
         }
@@ -182,67 +201,73 @@ export const projects = {
     'August 2016 & Before': {
         'label': 'August 2016 & Before',
         'work': {
-            location: 'CERN, Switzerland & France',
-            link: 'https://www.home.cern/',
+            location: {
+                label: 'CERN, Switzerland & France',
+                link: 'https://www.home.cern/',
+            },
+            designation: 'Intern (Openlab Summer Student)',
             projects: [
                 {
                     name: 'Beyonce',
                     role: 'Intern',
                     description: 'Dashboard that visualized the hierarchy of cloud resources at CERN.',
-                    link: ''
+                    id: '9'
                 },
                 {
                     name: 'Interactive Map of the World',
                     role: 'Intern',
                     description: 'An Interactive visualization of the world that for earthquakes that had ocurred in the last 100 years.',
-                    link: ''
+                    id: '8'
                 },
                 {
                     name: 'LHC Map',
                     role: 'Developer',
                     description: 'An interactive map of the LHC and its various experiments.',
-                    link: ''
+                    id: '7'
                 },
             ]
         },
         'personal': {
-            location: 'University of Delhi, India',
+            location: {
+                label: 'University of Delhi, India',
+                link: 'http://www.du.ac.in/'
+            },
             projects: [
                 {
                     name: 'Vanilla Private Cloud',
                     role: 'Developer',
                     description: 'Vanilla version of private cloud using Eucalyptus on CentOS environment',
-                    link: ''
+                    id: '6'
                 },
                 {
                     name: 'Optimizing CRP of Websites',
                     role: 'Research Member',
-                    description: 'A research project on how to optimize the critical rendering paths of websites.',
-                    link: ''
+                    description: 'A research project on optimizing the critical rendering paths of websites.',
+                    id: '5'
                 },
                 {
                     name: 'Analysis of HTTP/2',
                     role: 'Research Member',
                     description: 'A research project analyzing the security and performance improvements of HTTP/2 over HTTP/1',
-                    link: ''
+                    id: '4'
                 },
                 {
                     name: 'Health Buddy',
                     role: 'Developer',
                     description: 'Android application to track nutritional intake',
-                    link: ''
+                    id: '3'
                 },
                 {
                     name: 'NCAECA Website',
                     role: 'Intern',
                     description: 'Website for the National Conference of Advancements in Electrical and Computer Applications.',
-                    link: ''
+                    id: '2'
                 },
                 {
                     name: 'Quantum Key Distribution',
                     role: 'Intern',
                     description: 'Paper on application of Quantum Physics in secure transmission of public and private keys.',
-                    link: ''
+                    id: '1'
                 },
             ]
         }
