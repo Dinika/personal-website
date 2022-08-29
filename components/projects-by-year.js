@@ -162,16 +162,16 @@ class ProjectsByYear extends TemplateRenderer {
                     background: var(--primary-500);
                     transition: width 0.3s ease 0s, left 0.3s ease 0s;
                     width: 0;
-                  }
+                }
 
-                  a:hover:after { 
+                a:hover:after { 
                     width: 100%; 
                     left: 0; 
-                  } 
+                } 
 
-                  project-thumbnail {
+                project-thumbnail {
                     opacity: 0;
-                  }
+                }
             </style>
 
             ${this.yearDetails ? `

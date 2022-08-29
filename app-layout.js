@@ -12,6 +12,10 @@ class AppLayout extends TemplateRenderer {
 
     connectedCallback() {
         super.connectedCallback();
+        this.addEventListener('navigateTo', event => {
+            const section = this.shadowRoot.querySelector(event.detail);
+            section.scrollIntoView({ behavior: 'smooth' });
+        })
     }
 
     get template() {
@@ -30,15 +34,15 @@ class AppLayout extends TemplateRenderer {
                 <scroll-animator>
                     <nav-bar class="animate"></nav-bar>
                     
-                    <home-section class="animate"></home-section>
+                    <home-section class="animate" id="home"></home-section>
 
-                    <work-section class="animate"></work-section>
+                    <work-section class="animate" id="work"></work-section>
 
-                    <skills-section class="animate"></skills-section>
+                    <skills-section class="animate" id="skills"></skills-section>
 
-                    <about-section class="animate"></about-section>
+                    <about-section class="animate" id="about"></about-section>
 
-                    <contact-section class="animate"></contact-section>
+                    <contact-section class="animate" id="contact"></contact-section>
                 </scroll-animator>
 
                 <copyright-info></copyright-info>
