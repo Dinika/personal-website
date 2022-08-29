@@ -1,6 +1,7 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
 import './app-paper.js';
 import './project-dialog.js';
+import { detailsById } from '../data/project-details.js';
 
 class ProjectThumbnail extends TemplateRenderer {
 
@@ -19,7 +20,8 @@ class ProjectThumbnail extends TemplateRenderer {
     connectedCallback() {
         super.connectedCallback();
         this.addEventListener('click', (event) => {
-            this.shadowRoot.querySelector('project-dialog').open(this.project?.description);
+            const details = detailsById[this.project.id];
+            this.shadowRoot.querySelector('project-dialog').open({ ...this.project, details });
         });
     }
 
