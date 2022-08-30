@@ -3,7 +3,7 @@ import { TemplateRenderer } from '../utils/TemplateRenderer.js';
 class NavBar extends TemplateRenderer {
     connectedCallback() {
         super.connectedCallback();
-        const navLinks = this.shadowRoot.querySelectorAll('a');
+        const navLinks = this.shadowRoot.querySelectorAll('a.section-link');
         navLinks.forEach(l => {
             l.addEventListener('click', (event) => {
                 this.dispatchEvent(new CustomEvent('navigateTo', { detail: l.hash, bubbles: true, composed: true }))
@@ -69,11 +69,12 @@ class NavBar extends TemplateRenderer {
         
         <nav>
             <ul>
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="section-link" href="#home">Home</a></li>
+                <li><a class="section-link" href="#work">Work</a></li>
+                <li><a class="section-link" href="#skills">Skills</a></li>
+                <li><a class="section-link" href="#about">About</a></li>
+                <li><a class="section-link" href="#contact">Contact</a></li>
+                <li><a href="https://dinika.github.io/personal-website/Resume_Dinika_Saxena.pdf" download>Resume</a></li>
             </ul>
         </nav>
     `;

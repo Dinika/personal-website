@@ -152,7 +152,7 @@ class ProjectDialog extends TemplateRenderer {
 
                 <div class="subheader">
                     <h4 class="designation">${this.project.role}</h4>
-                    <img src="../assets/map-marker.svg" />
+                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
                     <a href="${this.project.location.link}">${this.project.location.label}</a>
                 </div>
 

@@ -189,7 +189,7 @@ class ProjectsByYear extends TemplateRenderer {
 
                                 <div class="subheader">
                                     <h5 class="designation">${this.yearDetails.work.designation}</h5>
-                                    <img src="../assets/map-marker.svg" />
+                                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
                                     <a href="${this.yearDetails.work.location.link}">${this.yearDetails.work.location.label}</a>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@ class ProjectsByYear extends TemplateRenderer {
                                 <h3>Personal Projects</h3>
 
                                 <div class="subheader">
-                                    <img src="../assets/map-marker.svg" />
+                                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
                                     <a href="${this.yearDetails.personal.location.link}">${this.yearDetails.personal.location.label}</a>
                                 </div>
                             </div>
