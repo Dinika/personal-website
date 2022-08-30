@@ -25,9 +25,9 @@ class AppLayout extends TemplateRenderer {
                 :host {
                     display: block;
                     padding: 90px 250px 0px 250px;
-                    
+                    position: relative;
                 }
-        
+                
             </style>
 
             <div>    
