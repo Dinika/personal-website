@@ -2,11 +2,13 @@
 
 This is the repository that contains the source code for my [web-based portfolio](https://dinika.github.io/personal-website/).
 
-![screenshot from 2019-01-20 22-03-53](https://user-images.githubusercontent.com/11242410/51442285-749b0500-1d01-11e9-82fa-902b32cd00d3.png)
+![Screenshot from 2022-08-30 13-40-15](https://user-images.githubusercontent.com/11242410/187427522-5ad25efe-ccf9-4af4-9e47-d0d644a494ea.png)
+
+## Using this source code
 
 This source code is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html), which means:
 
-* You are free to use, change, and share this code.
+* You are free to use, change, and share this code!
 * Your version of this code should be made free as well (i.e. users of your version of this code should be able to receive the source code for free).
 * Suitable attributions to this source code and me (the original author :angel:) should be given in your work.
 
