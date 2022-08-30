@@ -93,7 +93,7 @@ class AboutSection extends TemplateRenderer {
                     <h4>What do I like to do in my free time?</h4>
                 </div>
                 <p>
-                    I love playing with my dog - Sudo, dancing to hip-hop songs, playing FitXR on the oculus, listening to songs, walking around lakes and in parks, taking naps, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
+                    I love playing with my dog - Sudo, dancing, playing FitXR on the oculus, walking around lakes and in parks, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
                 </p>
             </div>
 
