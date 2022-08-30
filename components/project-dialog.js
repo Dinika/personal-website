@@ -38,7 +38,7 @@ class ProjectDialog extends TemplateRenderer {
                     border: none;
                     background: var(--primary-300);
                     min-height: 30rem;
-                    padding: 44px 20px 30px 68px; 
+                    padding: 44px 20px 20px 68px; 
                 }
 
                 dialog::backdrop {
@@ -72,6 +72,7 @@ class ProjectDialog extends TemplateRenderer {
                 ul {
                     margin: 0px;
                     margin-bottom: 28px;
+                    max-width: 75%;
                 }
 
                 li {
