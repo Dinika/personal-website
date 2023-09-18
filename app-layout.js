@@ -1,5 +1,6 @@
 import { TemplateRenderer } from './utils/TemplateRenderer.js';
 import './components/nav-bar.js';
+import './components/nav-menu.js';
 import './sections/home-section.js';
 import './sections/work-section.js';
 import './sections/skills-section.js';
@@ -28,12 +29,28 @@ class AppLayout extends TemplateRenderer {
                     position: relative;
                 }
                 
+                .mobile-only {
+                    display: none;
+                }
+
+                @media (max-width: 800px) {
+                    .mobile-only {
+                        display: block;
+                    }
+
+                    .not-for-mobile {
+                        display: none;
+                    }
+                }
+                
             </style>
 
             <div>    
                 <scroll-animator>
-                    <nav-bar class="animate"></nav-bar>
+                    <nav-bar class="animate not-for-mobile"></nav-bar>
                     
+                    <nav-menu class="mobile-only"></nav-menu>
+
                     <home-section class="animate" id="home"></home-section>
 
                     <work-section class="animate" id="work"></work-section>
