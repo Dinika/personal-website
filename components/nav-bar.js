@@ -8,7 +8,7 @@ class NavBar extends TemplateRenderer {
             l.addEventListener('click', (event) => {
                 this.dispatchEvent(new CustomEvent('navigateTo', { detail: l.hash, bubbles: true, composed: true }))
             });
-        })
+        });
     }
 
     get template() {
