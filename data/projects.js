@@ -1,12 +1,69 @@
 export const projects = {
-    'Oct 2021 - now': {
-        'label': 'Oct 2021 - now',
+    'April 2023 - now': {
+        'label': 'April 2023 - now',
+        'work': {
+            location: {
+                label: 'Blue Brain Project, EPFL, Geneva',
+                link: 'https://en.wikipedia.org/wiki/Blue_Brain_Project',
+            },
+            designation: 'Software Engineer',
+            projects: [
+                {
+                    name: 'Fusion',
+                    role: 'Frontend & SRE',
+                    description: 'Open source interface to upload and manage data.',
+                    id: '33'
+                },
+                {
+                    name: 'Open Brain Platform',
+                    role: 'Developer',
+                    description: 'Interface for neuroscientists to manage experiments using digital reconstructions of the brain.',
+                    id: '34'
+                },
+                {
+                    name: 'Delta',
+                    role: 'Developer',
+                    description: 'Scala server to help organize data in a knowledge graph.',
+                    id: '35'
+                },
+            ]
+        },
+        'personal': {
+            location: {
+                label: 'Geneva, Switzerland',
+                link: 'https://en.wikipedia.org/wiki/Geneva',
+            },
+            projects: [
+                {
+                    name: 'Image Annotate',
+                    role: 'Developer',
+                    description: 'Desktop application that can be used as gnome plugin to edit screenshots.',
+                    id: '36'
+                },
+                {
+                    name: 'Webm to Mp4',
+                    role: 'Developer',
+                    description: 'Nautilus script to convert videos from webm format to mp4.',
+                    id: '37'
+                },
+                {
+                    name: 'Microsquad',
+                    role: 'Contributor',
+                    description: 'A VR game designed to teach physics to kids.',
+                    id: '36'
+                },
+            ]
+        }
+
+    },
+    'Oct 2021 - March 2023': {
+        'label': 'Oct 2021 - March 2023',
         'work': {
             location: {
                 label: 'CERN, Switzerland & France',
                 link: 'https://www.home.cern/',
             },
-            designation: 'Software Engineer (Fellow)',
+            designation: 'Fullstack Software Engineer',
             projects: [
                 {
                     name: 'WRAP',
