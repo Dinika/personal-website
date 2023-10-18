@@ -63,8 +63,8 @@ class AboutSection extends TemplateRenderer {
                     <h4>Who am I?</h4>
                 </div>
                 <p>
-                    I am a software engineer, specialized in full-stack web development. Currently, I am working at CERN with a group of really smart engineers,
-                    managers, and physicists to develop services, applications, and APIs that are used for managing and smoothly opertating the LHC.
+                    I am a software engineer, specialized in full-stack web development. Currently, I am working at BBP, EPFL with a group of really smart engineers,
+                    managers, and neuroscientists to develop services, applications, and APIs that are used for digital reconstruction and simulation of brain.
                     It is truly a humbling experience.
                 </p>
             </div>
@@ -93,7 +93,7 @@ class AboutSection extends TemplateRenderer {
                     <h4>What do I like to do in my free time?</h4>
                 </div>
                 <p>
-                    I love playing with my dog - Sudo, dancing, playing FitXR on the oculus, walking around lakes and in parks, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
+                    I love playing with my dog - Sudo, sculpting with clay, drawing botanical illustrations, dancing, playing FitXR on the oculus, walking around lakes and in parks, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
                 </p>
             </div>
 
