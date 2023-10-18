@@ -59,8 +59,8 @@ class HomeSection extends TemplateRenderer {
         <app-paper>
             <p>
                 I am a <span class="highlight">software engineer</span> experienced in architecturing and developing web applications.
-                I am currently working at <a href="https://home.web.cern.ch/about/who-we-are">CERN</a> where I am playing a small part in the
-                monitoring and management of the Large Hadron Collidor.
+                I am currently working for the <a href="https://en.wikipedia.org/wiki/Blue_Brain_Project">Blue Brain Project</a> at EPFL where I am playing a small part
+                in the digital reconstruction and simulation of the brain.
             </p>
         </app-paper>
     `;
