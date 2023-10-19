@@ -4,7 +4,7 @@ import '../components/scroll-animator.js';
 
 class ContactSection extends TemplateRenderer {
 
-    emailId = "dinikasaxenas@gmail.com";
+    emailId = "dinika@greyllama.cc";
 
     get template() {
         return `
