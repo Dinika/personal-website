@@ -28,13 +28,13 @@ I do [plan to use](https://trello.com/c/nbQoVesr/14-add-typescript-support) type
 ## Contribution Guidelines :hearts:
 
 Please use the "Issues" feature to open a new issue.
-All the tickets for this project are tracked on [this trello board](https://trello.com/b/rbgAUrPd/portfolio) which has public visibility. Feel free to pick a ticket from there and start working on it. In case of any doubts, please don't hesitate to email me at dinikasaxenas@gmail.com.
+All the tickets for this project are tracked on [this trello board](https://trello.com/b/rbgAUrPd/portfolio) which has public visibility. Feel free to pick a ticket from there and start working on it. In case of any doubts, please don't hesitate to email me at dinika@greyllama.cc.
 
 ## Author :princess:
 
 Dinika Saxena
 
-- e-mail: dinikasaxenas@gmail.com
+- e-mail: dinika@greyllama.cc
 
 ## License
 
