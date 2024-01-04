@@ -33,7 +33,7 @@ class CopyrightInfo extends TemplateRenderer {
         </style>
         
         
-        <p>Copyright © 2022 <span class="highlight">Dinika Saxena</span> | Licensed under <a href="todo">GNU GPLv3</a> | Get the <a href="https://github.com/Dinika/personal-website.git">source code</a>.</p>
+        <p>Copyright © 2024 <span class="highlight">Dinika Saxena</span> | Licensed under <a href="todo">GNU GPLv3</a> | Get the <a href="https://github.com/Dinika/personal-website.git">source code</a>.</p>
     `;
     }
 

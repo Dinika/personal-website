@@ -49,6 +49,39 @@ class AboutSection extends TemplateRenderer {
                 max-width: 80%;
             }
 
+            a {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0em;
+                text-align: center;                
+                color: var(--primary-500);
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                cursor: pointer;
+                padding-bottom: 4px;
+            }
+
+            a:after {    
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                background: var(--primary-500);
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+            }
+
+            a:hover:after { 
+                width: 100%; 
+                left: 0; 
+            } 
+
         </style>
         
         
@@ -93,7 +126,7 @@ class AboutSection extends TemplateRenderer {
                     <h4>What do I like to do in my free time?</h4>
                 </div>
                 <p>
-                    I love playing with my dog - Sudo, sculpting with clay, drawing botanical illustrations, dancing, playing FitXR on the oculus, walking around lakes and in parks, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
+                    I love playing with my dog - Sudo, <a href="https://www.instagram.com/grey_llama_drama/">sculpting with clay, making art</a>, drawing botanical illustrations, dancing, playing FitXR on the oculus, walking around lakes and in parks, eating noodles, learning about VR, and pair-programming with my friends on open-sourced projects.
                 </p>
             </div>
 

@@ -108,7 +108,7 @@ class ContactSection extends TemplateRenderer {
         <scroll-animator>
             <app-paper class="animate">
                 <p>
-                    Questions or Comments? I’d love to hear from you.
+                    Questions or Comments? I’d love to hear from you!
                 </p>
 
                 <p>Email me at 
@@ -119,6 +119,7 @@ class ContactSection extends TemplateRenderer {
                 </p>
 
                 <p>You can also find me on <a href="https://linkedin.com/in/dinika-saxena">LinkedIn</a> or <a href="https://github.com/Dinika">GitHub</a>.</p>
+                <p>Most of my artwork is available <a href="https://www.instagram.com/grey_llama_drama/">here</a>. Do stop by, say hi!</p>
             </app-paper>
         </scroll-animator>
     `;
