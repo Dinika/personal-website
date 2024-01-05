@@ -31,13 +31,11 @@ class NavMenu extends TemplateRenderer {
         if (type === 'open') {
             const openMenuButton = this.shadowRoot.getElementById(NavMenu.openButtonId);
             openMenuButton.addEventListener('click', this.#openMenu.bind(this));
-
-
-
         } else if (type === 'close') {
             const navLinks = this.shadowRoot.querySelectorAll('a.section-link');
             navLinks.forEach(l => {
                 l.addEventListener('click', (event) => {
+                    this.#closeMenu();
                     this.dispatchEvent(new CustomEvent('navigateTo', { detail: l.hash, bubbles: true, composed: true }))
                 });
             });
