@@ -4,6 +4,7 @@ export const advanced = [
     'HTMLCSS',
     'Web Components',
     'Server Sent Events',
+    'React',
     'Angular',
     'RxJS',
     'SpringBoot',
@@ -20,7 +21,6 @@ export const advanced = [
 export const intermediate = [
     'Java',
     'Bash',
-    'React',
     'Vue',
     'Redux',
     'Scala',
