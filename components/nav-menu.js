@@ -78,12 +78,47 @@ class NavMenu extends TemplateRenderer {
                 }
 
                 a {
+                    font-size: 1.5rem;
+                    line-height: 25px;
+                    letter-spacing: 0em;
+                    text-align: center;                
                     color: white;
+                    display: inline-block;
+                    position: relative;
                     text-decoration: none;
+                    cursor: pointer;
+                    padding-bottom: 4px;
                 }
+
+                a:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: white;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                }
+    
+                a:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                } 
 
                 ul {
                     list-style: none;
+                }
+
+                li {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                li:first-of-type {
+                    margin-top: 3rem;
                 }
 
                 button {

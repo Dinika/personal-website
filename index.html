@@ -23,7 +23,7 @@
 <body>
     <script type="module">
         import './app-layout.js'
-        
+
         // TODO: Remove dialog, related styles and these functions once portfolio:40 is done.
         // Show warning dialog if user's screen size is not supported yet. 
         addEventListener('load', (event) => {
@@ -41,15 +41,15 @@
 
         notForMobileDialog.addEventListener('click', event => {
             const rect = notForMobileDialog.getBoundingClientRect();
-                const isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height
-                    && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+            const isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+                && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
 
-                if (!isInDialog) {
-                    notForMobileDialog.close();
-                }
+            if (!isInDialog) {
+                notForMobileDialog.close();
+            }
         })
     </script>
-    
+
     <style>
         dialog {
             border-radius: 20px;
@@ -59,11 +59,11 @@
             min-height: 10rem;
             padding: 44px 40px 20px 40px;
             position: absolute;
-            z-index: 1000;   
+            z-index: 1000;
         }
 
         dialog::backdrop {
-            background: rgba(0,0,0,0.8)
+            background: rgba(0, 0, 0, 0.8)
         }
 
         h1 {
@@ -75,6 +75,7 @@
             display: inline-block;
             margin-right: 20px;
         }
+
         a {
             font-size: 16px;
             font-weight: 400;
@@ -89,7 +90,7 @@
             padding-bottom: 8px;
         }
 
-        a:after {    
+        a:after {
             background: none repeat scroll 0 0 transparent;
             bottom: 0;
             content: "";
@@ -102,21 +103,25 @@
             width: 0;
         }
 
-        a:hover:after { 
-            width: 100%; 
-            left: 0; 
+        a:hover:after {
+            width: 100%;
+            left: 0;
         }
-
     </style>
 
     <dialog class="only-small-screen" id="not-for-mobile">
         <h1><span class="oath">Dang it! </span>Minced Oath!</h1>
-        <p>This website is not yet compatible with small screen devices, but <a href="https://trello.com/c/eio29bz9/40-make-website-responsive">I'm working on it.</a><br/> In the meantime, you can:
+        <p>This website is not yet compatible with small screen devices, but <a
+                href="https://trello.com/c/eio29bz9/40-make-website-responsive">I'm working on it.</a><br /> In the
+            meantime, you can:
         </p>
         <ul>
-            <li>Download my <a href="https://dinika.github.io/personal-website/Resume_Dinika_Saxena.pdf" download>Resume.</a></li>
-            <li style="padding-bottom: 8px;">Close this dialog by clicking outside of it and continue browsing the website anyway.</li>
-            <li>Maybe, <a href="https://github.com/Dinika/personal-website/issues/2">contribute</a> in making this website responsive? (⊃｡•́‿•̀｡)⊃</li>
+            <li>Download my <a href="https://dinika.github.io/personal-website/Resume_Dinika_Saxena.pdf"
+                    download>Resume.</a></li>
+            <li style="padding-bottom: 8px;">Close this dialog by clicking outside of it and continue browsing the
+                website anyway.</li>
+            <li>Maybe, <a href="https://github.com/Dinika/personal-website/issues/2">contribute</a> in making this
+                website responsive? (⊃｡•́‿•̀｡)⊃</li>
         </ul>
     </dialog>
 
