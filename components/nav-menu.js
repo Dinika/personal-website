@@ -1,7 +1,6 @@
 import { TemplateRenderer } from '../utils/TemplateRenderer.js';
 
 class NavMenu extends TemplateRenderer {
-    #isMenuOpen = false;
     static openButtonId = 'open-nav-menu-button';
     static closeButtonId = 'close-nav-menu-button';
     static menuMask = 'menu-mask';
@@ -10,22 +9,20 @@ class NavMenu extends TemplateRenderer {
         super.connectedCallback();
 
         this.#addMenuEventListener('open');
-    }
-
-    #openMenu() {
-        this.#isMenuOpen = true;
-
-        this.render();
-
         this.#addMenuEventListener('close');
     }
 
+    #openMenu() {
+        const menuWrapper = this.shadowRoot.getElementById(NavMenu.menuMask);
+        menuWrapper.classList.add('show');
+        console.log('Menu opening', menuWrapper);
+
+    }
+
     #closeMenu() {
-        this.#isMenuOpen = false;
-
-        this.render();
-
-        this.#addMenuEventListener('open');
+        const menuWrapper = this.shadowRoot.getElementById(NavMenu.menuMask);
+        console.log('Menu closing', menuWrapper);
+        menuWrapper.classList.remove('show');
     }
 
     #addMenuEventListener(type = 'open') {
@@ -78,19 +75,18 @@ class NavMenu extends TemplateRenderer {
         return `
             <style>
                 #${NavMenu.menuMask} {
-                    background-color: rgba(0,0,0,0.8);
                     width: 100vw;
                     height: 100vh;
                     position: fixed;
                     top: 0;
-                    left: 0;
+                    left: -100vw;
                     z-index: 9;
+                    transition: left 0.5s cubic-bezier(0.820, 0.085, 0.395, 0.895);
                 }
                 
                 nav {
                     position: fixed;
                     top: 0;
-                    left: 0;
                     background: var(--primary-700);
                     color: white;
                     width: 70vw;
@@ -99,10 +95,17 @@ class NavMenu extends TemplateRenderer {
                     z-index: 10;
                 }
 
+                .show {
+                    left: 0 !important;
+                }
+                .hide {
+                    left: -10000px;
+                }
+
                 .open-menu-btn {
                     margin-left: 1rem;
                     margin-top: 1rem;
-                    z-index: 10;
+                    z-index: 8;
                 }
 
                 a {
@@ -166,17 +169,10 @@ class NavMenu extends TemplateRenderer {
                     top: 10px;
                     right: 10px;
                 }
-
-                .show {
-                    display: block;
-                }
-
-                .hide {
-                    display: none;
-                }
             </style>
             
-            ${this.#isMenuOpen ? menu : openMenuButton}
+            ${openMenuButton}
+            ${menu}
         `
     }
 }
