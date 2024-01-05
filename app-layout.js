@@ -25,15 +25,24 @@ class AppLayout extends TemplateRenderer {
 
                 :host {
                     display: block;
-                    padding: 90px 250px 0px 250px;
+                    padding: 90px 15rem 0px 15rem;
                     position: relative;
                 }
-                
+
                 .mobile-only {
                     display: none;
                 }
 
-                @media (max-width: 800px) {
+                @media (1000px <= width <= 1400px) {
+                    :host {
+                        padding: 90px 8rem 0px 8rem;
+                    }
+                }
+
+                @media (max-width: 1000px) {
+                    :host {
+                        padding: 90px 2rem 0px 2rem;
+                    }
                     .mobile-only {
                         display: block;
                     }
