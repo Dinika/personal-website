@@ -4,6 +4,7 @@ class NavMenu extends TemplateRenderer {
     #isMenuOpen = false;
     static openButtonId = 'open-nav-menu-button';
     static closeButtonId = 'close-nav-menu-button';
+    static menuMask = 'menu-mask';
 
     connectedCallback() {
         super.connectedCallback();
@@ -42,27 +43,50 @@ class NavMenu extends TemplateRenderer {
 
             const closeMenuButton = this.shadowRoot.getElementById(NavMenu.closeButtonId);
             closeMenuButton.addEventListener('click', this.#closeMenu.bind(this));
+
+            const menu = this.shadowRoot.querySelector('nav');
+            const mask = this.shadowRoot.getElementById(NavMenu.menuMask);
+
+            mask.addEventListener('click', (event) => {
+                const menuRect = menu.getBoundingClientRect();
+                const clickedOnMask = event.clientX >= (menuRect.left + menuRect.width);
+                if (clickedOnMask) {
+                    this.#closeMenu();
+                }
+            })
         }
     }
 
     get template() {
         const openMenuButton = `<button id="${NavMenu.openButtonId}" class="open-menu-btn" alt="Open navigation menu"><img src="../assets/menu-icon-2.svg" /></button>`;
         const menu = `
-            <nav>
-                <button id="${NavMenu.closeButtonId}" alt="Close navigation menu"><img src="../assets/close-icon.svg" /></button>
-                <ul>
-                    <li><a class="section-link" href="#home">Home</a></li>
-                    <li><a class="section-link" href="#work">Work</a></li>
-                    <li><a class="section-link" href="#skills">Skills</a></li>
-                    <li><a class="section-link" href="#about">About</a></li>
-                    <li><a class="section-link" href="#contact">Contact</a></li>
-                    <li><a href="https://dinika.github.io/personal-website/Resume_Dinika_Saxena.pdf" download>Resume</a></li>
-                </ul>
-            </nav>
+            <div id="${NavMenu.menuMask}">
+                <nav>
+                    <button id="${NavMenu.closeButtonId}" alt="Close navigation menu"><img src="../assets/close-icon.svg" /></button>
+                    <ul>
+                        <li><a class="section-link" href="#home">Home</a></li>
+                        <li><a class="section-link" href="#work">Work</a></li>
+                        <li><a class="section-link" href="#skills">Skills</a></li>
+                        <li><a class="section-link" href="#about">About</a></li>
+                        <li><a class="section-link" href="#contact">Contact</a></li>
+                        <li><a href="https://dinika.github.io/personal-website/Resume_Dinika_Saxena.pdf" download>Resume</a></li>
+                    </ul>
+                </nav>
+            </div>
         `;
 
         return `
             <style>
+                #${NavMenu.menuMask} {
+                    background-color: rgba(0,0,0,0.8);
+                    width: 100vw;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 9;
+                }
+                
                 nav {
                     position: fixed;
                     top: 0;
@@ -78,6 +102,7 @@ class NavMenu extends TemplateRenderer {
                 .open-menu-btn {
                     margin-left: 1rem;
                     margin-top: 1rem;
+                    z-index: 10;
                 }
 
                 a {

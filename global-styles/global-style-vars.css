@@ -7,9 +7,9 @@
     --text-700: #000000;
     --text-300: #494949;
 
-    font-size: 16px;
+    font-size: 18px;
     /* Mobile phones*/
     @media (width <= 1000px) {
-        font-size: 24px;
+        font-size: 16px;
     }
 }
