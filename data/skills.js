@@ -51,6 +51,6 @@ export const beginner = [
 export const devEnvironment = [
     'Fedora',
     'VS Code',
-    'IntelliJ',
-    'Vim',
+    'vim',
+    'System76',
 ];
