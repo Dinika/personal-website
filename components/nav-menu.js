@@ -46,7 +46,7 @@ class NavMenu extends TemplateRenderer {
     }
 
     get template() {
-        const openMenuButton = `<button id="${NavMenu.openButtonId}" class="open-menu-btn" alt="Open navigation menu"><img src="../assets/menu-icon.svg" /></button>`;
+        const openMenuButton = `<button id="${NavMenu.openButtonId}" class="open-menu-btn" alt="Open navigation menu"><img src="../assets/menu-icon-2.svg" /></button>`;
         const menu = `
             <nav>
                 <button id="${NavMenu.closeButtonId}" alt="Close navigation menu"><img src="../assets/close-icon.svg" /></button>
@@ -73,6 +73,11 @@ class NavMenu extends TemplateRenderer {
                     min-width: max-content;
                     height: 100vh;
                     z-index: 10;
+                }
+
+                .open-menu-btn {
+                    margin-left: 1rem;
+                    margin-top: 1rem;
                 }
 
                 a {
