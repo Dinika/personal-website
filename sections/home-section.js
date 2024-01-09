@@ -9,10 +9,9 @@ class HomeSection extends TemplateRenderer {
 
             :host {
                 display: flex;
-                align-items: center;
+                align-items: center; 
                 justify-content: space-between;
-                margin: 92px 60px 0 60px;
-
+                margin: 5rem 10rem 0 10rem;
             }
 
             h1 {
@@ -45,6 +44,30 @@ class HomeSection extends TemplateRenderer {
                 max-width: 560px;
                 min-height: 228px;
                 padding: 36px;
+            }
+
+            @media (900px < width <= 2000px) {
+                :host {
+                    margin: 5rem 1rem;
+                }
+            }
+
+            @media (width <= 900px) {
+                :host {
+                    margin: 1rem 0rem;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                }
+                h1 {
+                    font-size: 3rem;
+                }
+                app-paper {
+                    padding: 1.5rem 1rem; 
+                }
+                p {
+                    margin: 0;
+                }
             }
 
         </style>

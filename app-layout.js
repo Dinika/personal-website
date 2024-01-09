@@ -25,7 +25,7 @@ class AppLayout extends TemplateRenderer {
 
                 :host {
                     display: block;
-                    padding: 90px 15rem 0px 15rem;
+                    padding: 90px 20rem 0px 20rem;
                     position: relative;
                 }
 
@@ -33,13 +33,13 @@ class AppLayout extends TemplateRenderer {
                     display: none;
                 }
 
-                @media (1000px <= width <= 1400px) {
+                @media (1200px <= width <= 1800px) {
                     :host {
-                        padding: 90px 8rem 0px 8rem;
+                        padding: 90px 10rem 0px 10rem;
                     }
                 }
 
-                @media (max-width: 1000px) {
+                @media (max-width: 1200px) {
                     :host {
                         padding: 90px 2rem 0px 2rem;
                     }
@@ -49,6 +49,12 @@ class AppLayout extends TemplateRenderer {
 
                     .not-for-mobile {
                         display: none;
+                    }
+                }
+
+                @media (width <= 900px) {
+                    :host {
+                        padding: 3rem 2rem 0px 3rem; 
                     }
                 }
                 

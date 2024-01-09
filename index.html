@@ -31,10 +31,9 @@
         addEventListener('load', (event) => {
             const width = Math.min(window.screen.width, window.innerWidth);
             const isIncompatibleScreen = width < 1234;
-            console.log()
             if (isIncompatibleScreen) {
                 const dialog = document.getElementById('not-for-mobile');
-                dialog.showModal();
+                dialog.showModal()
             }
         });
 

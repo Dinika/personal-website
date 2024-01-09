@@ -15,13 +15,10 @@ class NavMenu extends TemplateRenderer {
     #openMenu() {
         const menuWrapper = this.shadowRoot.getElementById(NavMenu.menuMask);
         menuWrapper.classList.add('show');
-        console.log('Menu opening', menuWrapper);
-
     }
 
     #closeMenu() {
         const menuWrapper = this.shadowRoot.getElementById(NavMenu.menuMask);
-        console.log('Menu closing', menuWrapper);
         menuWrapper.classList.remove('show');
     }
 
@@ -46,8 +43,8 @@ class NavMenu extends TemplateRenderer {
 
             mask.addEventListener('click', (event) => {
                 const menuRect = menu.getBoundingClientRect();
-                const clickedOnMask = event.clientX >= (menuRect.left + menuRect.width);
-                if (clickedOnMask) {
+                const clickedOutsideMenu = event.clientX >= (menuRect.left + menuRect.width);
+                if (clickedOutsideMenu) {
                     this.#closeMenu();
                 }
             })
@@ -103,8 +100,8 @@ class NavMenu extends TemplateRenderer {
                 }
 
                 .open-menu-btn {
-                    margin-left: 1rem;
-                    margin-top: 1rem;
+                    margin-left: 1.5rem;
+                    margin-top: 1.5rem;
                     z-index: 8;
                 }
 
