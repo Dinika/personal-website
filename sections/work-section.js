@@ -45,6 +45,7 @@ class WorkSection extends TemplateRenderer {
         this.yAxisLength = yAxis.getTotalLength();
 
         const mask = this.shadowRoot.querySelector('#mask');
+        console.log('Length', this.yAxisLength);
         mask.style.strokeDasharray = this.yAxisLength;
         mask.style.strokeDashoffset = this.yAxisLength;
     }
@@ -66,6 +67,7 @@ class WorkSection extends TemplateRenderer {
         const mask = this.shadowRoot.querySelector('#mask');
         const dashoffset =
             (this.yAxisLength - scrollPos * this.yAxisLength / (this.selfHeight));
+        console.log('Dash offset', dashoffset)
         mask.style.strokeDashoffset = '' + dashoffset;
 
         this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
@@ -104,13 +106,25 @@ class WorkSection extends TemplateRenderer {
             line{stroke-width:3px;}
             #mask{stroke:white}
 
+            @media (width <= 900px) {
+                :host {
+                    margin-top: 3rem;
+                    margin-left: 0;
+                }
+                svg {
+                    width: 5px !important;
+                    margin-right: -100px;
+                }
+                .content {
+                    margin-left: 4rem;
+                }
+            }
         </style>
         
         <div class="container">
             
             <svg width="1">
                 <defs>
-
                     <line id="thePath" x1="0.5" y1="0.5" x2="0.499982" y2="100%" />
                     <mask id="mask1">
                         <use id="mask" xlink:href="#thePath" />

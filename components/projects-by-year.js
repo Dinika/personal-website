@@ -172,6 +172,13 @@ class ProjectsByYear extends TemplateRenderer {
                 project-thumbnail {
                     opacity: 0;
                 }
+
+                @media (width <= 900px) {
+                    .y-axis-label {
+                        position: absolute;
+                        margin: 100% 0px 100% -16px;
+                    }
+                }
             </style>
 
             ${this.yearDetails ? `
