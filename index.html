@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-    <meta name="color-scheme" content="dark light">
 
     <link rel=" preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +30,7 @@
         // Show warning dialog if user's screen size is not supported yet. 
         addEventListener('load', (event) => {
             const width = Math.min(window.screen.width, window.innerWidth);
-            const isIncompatibleScreen = width < 1234;
+            const isIncompatibleScreen = width < 1000;
             if (isIncompatibleScreen) {
                 const dialog = document.getElementById('not-for-mobile');
                 // dialog.showModal()

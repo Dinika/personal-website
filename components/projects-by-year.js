@@ -10,6 +10,12 @@ class ProjectsByYear extends TemplateRenderer {
         return [yearDetailsAttrName];
     }
 
+    connectedCallback() {
+        super.connectedCallback();
+        const width = Math.min(window.screen.width, window.innerWidth);
+        const isMobileDevice = width < 1000;
+    }
+
     attributeChangedCallback(attrName, newValue) {
         if (attrName === yearDetailsAttrName) {
             this.yearDetails = JSON.parse(decodeURIComponent(newValue));
@@ -174,9 +180,25 @@ class ProjectsByYear extends TemplateRenderer {
                 }
 
                 @media (width <= 900px) {
+                    .project-details {
+                        width: 100vw;
+                    }
                     .y-axis-label {
                         position: absolute;
                         margin: 100% 0px 100% -16px;
+                    }
+
+                    .horizontal-media-scroller {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        overflow-x: auto;
+                        height: 100%;
+                        margin-bottom: 20px;
+                        width: 100%;
+                    }
+
+                    project-thumbnail {
+                        flex: 0 0 auto;
                     }
                 }
             </style>
@@ -201,7 +223,7 @@ class ProjectsByYear extends TemplateRenderer {
                                 </div>
                             </div>
 
-                            <div class="thumbnails">
+                            <div class="thumbnails horizontal-media-scroller">
                                 ${this.toProjectThumbnails(this.yearDetails.work.projects, this.yearDetails.work.location)}
                             </div>
                         </div>
@@ -216,7 +238,7 @@ class ProjectsByYear extends TemplateRenderer {
                                 </div>
                             </div>
 
-                            <div class="thumbnails">
+                            <div class="thumbnails horizontal-media-scroller">
                                 ${this.toProjectThumbnails(this.yearDetails.personal.projects, this.yearDetails.personal.location)}
                             </div>
                         </div>
