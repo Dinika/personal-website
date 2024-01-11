@@ -200,6 +200,18 @@ class ProjectsByYear extends TemplateRenderer {
                     project-thumbnail {
                         flex: 0 0 auto;
                     }
+
+                    .personal-projects {
+                        align-items: flex-start;
+                    }
+    
+                    .personal-projects .headers {
+                        align-items: flex-start;
+                    }
+    
+                    .personal-projects .thumbnails {
+                        justify-content: flex-start;
+                    }
                 }
             </style>
 
