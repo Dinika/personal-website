@@ -194,11 +194,6 @@ class ProjectsByYear extends TemplateRenderer {
                         width: 100vw; 
                     }
 
-                    .y-axis-label {
-                        position: absolute;
-                        margin: 100% 0px 100% -16px;
-                    }
-
                     .horizontal-media-scroller {
                         display: flex;
                         flex-wrap: nowrap;

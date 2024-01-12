@@ -111,12 +111,8 @@ class WorkSection extends TemplateRenderer {
                     margin-top: 2.5rem;
                     margin-left: 0;
                 }
-                svg {
-                    width: 5px !important;
-                    margin-right: -100px;
-                }
-                .content {
-                    margin-left: 4rem;
+                .container {
+                    width: max-content;
                 }
             }
         </style>

@@ -52,7 +52,7 @@ class NavMenu extends TemplateRenderer {
     }
 
     get template() {
-        const openMenuButton = `<button id="${NavMenu.openButtonId}" class="open-menu-btn" alt="Open navigation menu"><img src="../assets/menu-icon-2.svg" /></button>`;
+        const openMenuButton = `<button id="${NavMenu.openButtonId}" class="open-menu-btn" alt="Open navigation menu"><img src="../assets/menu-icon.svg" /></button>`;
         const menu = `
             <div id="${NavMenu.menuMask}">
                 <nav>
