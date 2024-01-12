@@ -105,6 +105,10 @@ class ProjectsByYear extends TemplateRenderer {
                     margin-right: 64px;
                 }
 
+                .personal-projects .headers h3 {
+                    margin-bottom: 0;
+                }
+
                 .personal-projects .thumbnails {
                     justify-content: flex-end;
                 }
@@ -140,6 +144,12 @@ class ProjectsByYear extends TemplateRenderer {
                     position: relative;
                     margin-left: 4px;
                     padding-bottom: 8px;
+                }
+
+                .location {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 4px;
                 }
 
                 a {
@@ -181,8 +191,9 @@ class ProjectsByYear extends TemplateRenderer {
 
                 @media (width <= 900px) {
                     .project-details {
-                        width: 100vw;
+                        width: 100vw; 
                     }
+
                     .y-axis-label {
                         position: absolute;
                         margin: 100% 0px 100% -16px;
@@ -195,6 +206,11 @@ class ProjectsByYear extends TemplateRenderer {
                         height: 100%;
                         margin-bottom: 20px;
                         width: 100%;
+                        scrollbar-width: none;
+                    }
+
+                    .horizontal-media-scroller::-webkit-scrollbar {
+                        display: none;
                     }
 
                     project-thumbnail {
@@ -211,6 +227,36 @@ class ProjectsByYear extends TemplateRenderer {
     
                     .personal-projects .thumbnails {
                         justify-content: flex-start;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    .subheader {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    .designation {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        padding-bottom: 0.25rem;
+                    }
+
+                    .subheader a {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        padding-bottom: 0.25rem;
+                    }
+
+                    .location {
+                        margin-left: 2px;
+                        align-items: baseline;
+                    }
+
+                    .subheader {
+                        margin-top: 0;
                     }
                 }
             </style>
@@ -230,8 +276,10 @@ class ProjectsByYear extends TemplateRenderer {
 
                                 <div class="subheader">
                                     <h5 class="designation">${this.yearDetails.work.designation}</h5>
-                                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
-                                    <a href="${this.yearDetails.work.location.link}">${this.yearDetails.work.location.label}</a>
+                                    <div class="location">
+                                        <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
+                                        <a href="${this.yearDetails.work.location.link}">${this.yearDetails.work.location.label}</a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -245,8 +293,10 @@ class ProjectsByYear extends TemplateRenderer {
                                 <h3>Personal Projects</h3>
 
                                 <div class="subheader">
-                                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
-                                    <a href="${this.yearDetails.personal.location.link}">${this.yearDetails.personal.location.label}</a>
+                                    <div class="location">
+                                        <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
+                                        <a href="${this.yearDetails.personal.location.link}">${this.yearDetails.personal.location.label}</a>
+                                    </div>
                                 </div>
                             </div>
 

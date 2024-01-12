@@ -128,6 +128,14 @@ class ProjectThumbnail extends TemplateRenderer {
                     transform: translate(140px, 100px);
                 }
 
+                @media (width <= 900px) {
+                    .parent {
+                        width: 11rem;
+                        height: 11rem;
+                        margin-top: 2.5rem;
+                    }
+                }
+
             </style>
             ${this.project
                 ? `

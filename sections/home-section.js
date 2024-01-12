@@ -54,13 +54,14 @@ class HomeSection extends TemplateRenderer {
 
             @media (width <= 900px) {
                 :host {
-                    margin: 1rem 0rem;
+                    margin: 0rem;
                     flex-direction: column;
                     justify-content: start;
                     align-items: start;
                 }
                 h1 {
                     font-size: 3rem;
+                    margin: 1.5rem 0;
                 }
                 app-paper {
                     padding: 1.5rem 1rem; 
@@ -83,7 +84,7 @@ class HomeSection extends TemplateRenderer {
             <p>
                 I am a <span class="highlight">software engineer</span> experienced in architecturing and developing web applications.
                 I am currently working for the <a href="https://en.wikipedia.org/wiki/Blue_Brain_Project">Blue Brain Project</a> at EPFL where I am developing applications that help 
-                neuroscientists and researchers manage huge amounts of data that is required to get closer to our goal of digitally reconstructing and simulating the brain.
+                neuroscientists manage huge amounts of data to get closer to our goal of digitally reconstructing and simulating the brain.
             </p>
         </app-paper>
     `;

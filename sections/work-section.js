@@ -108,7 +108,7 @@ class WorkSection extends TemplateRenderer {
 
             @media (width <= 900px) {
                 :host {
-                    margin-top: 3rem;
+                    margin-top: 2.5rem;
                     margin-left: 0;
                 }
                 svg {

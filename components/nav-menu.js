@@ -100,8 +100,8 @@ class NavMenu extends TemplateRenderer {
                 }
 
                 .open-menu-btn {
-                    margin-left: 1.5rem;
-                    margin-top: 1.5rem;
+                    margin-left: 0rem;
+                    margin-top: 0.8rem;
                     z-index: 8;
                 }
 
