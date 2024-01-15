@@ -10,9 +10,8 @@ class SkillsSection extends TemplateRenderer {
     get template() {
         return `
         <style>
-
             :host {
-                margin: 92px 60px 0 60px;
+                margin: 5rem 3.5rem 0 3.5rem;
                 display: block;
             }
 
@@ -98,6 +97,47 @@ class SkillsSection extends TemplateRenderer {
         
                 to {
                     opacity: 1;
+                }
+            }
+
+            @media (width <= 900px) {
+                :host {
+                    margin: 3rem 0 0 0; 
+                }
+
+                h1 {
+                    font-size: 3rem;
+                    margin-bottom: 0;
+                }
+
+                .cursor {
+                    height: 2.5rem;
+                }
+
+                .content {
+                    flex-direction: column;
+                }
+
+                h4 {
+                    font-weight: 500;
+                    margin-top: 1.875rem;
+                    margin-bottom: 1.35rem;
+                    margin-left: 1rem;
+                }
+
+                li {
+                    font-size: 1rem;
+                }
+
+                app-paper {
+                    padding-top: 1.25rem;
+                    padding-bottom: 1.25rem;
+                    padding-left: 1.125rem;
+                    width: 16rem;
+                }
+
+                app-paper.full-height {
+                    min-height: unset;
                 }
             }
 
