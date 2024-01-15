@@ -100,6 +100,16 @@ class SkillsSection extends TemplateRenderer {
                 }
             }
 
+            @media (900px < width <= 1440px) {
+                :host {
+                    margin: 5rem 0 0 0;
+                }
+
+                .content {
+                    flex-wrap: wrap;
+                } 
+            }
+
             @media (width <= 900px) {
                 :host {
                     margin: 3rem 0 0 0; 
