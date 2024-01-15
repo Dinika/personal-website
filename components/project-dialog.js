@@ -102,6 +102,11 @@ class ProjectDialog extends TemplateRenderer {
                     font-weight: 700;
                 }
 
+                .location {
+                    display: flex;
+                    align-items: center;
+                }
+
                 a {
                     font-family: Quicksand;
                     font-weight: 400;
@@ -146,6 +151,21 @@ class ProjectDialog extends TemplateRenderer {
                     margin: 4px 10px;
                     font-weight: 500;
                 }
+
+                @media (width <= 900px) {
+                    dialog {
+                        min-width: unset;
+                        max-width: unset;
+                        width: 80%;
+                        max-height: 70%;
+                        padding-left: 1.5rem;
+                    }
+
+                    .subheader {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
             </style>
             
             <dialog>
@@ -153,8 +173,10 @@ class ProjectDialog extends TemplateRenderer {
 
                 <div class="subheader">
                     <h4 class="designation">${this.project.role}</h4>
-                    <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
-                    <a href="${this.project.location.link}">${this.project.location.label}</a>
+                    <div class="location">
+                        <img src="https://dinika.github.io/personal-website/assets/map-marker.svg" />
+                        <a href="${this.project.location.link}">${this.project.location.label}</a>
+                    </div>
                 </div>
 
                 <p>${this.project.description}</p>

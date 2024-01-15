@@ -45,7 +45,6 @@ class WorkSection extends TemplateRenderer {
         this.yAxisLength = yAxis.getTotalLength();
 
         const mask = this.shadowRoot.querySelector('#mask');
-        console.log('Length', this.yAxisLength);
         mask.style.strokeDasharray = this.yAxisLength;
         mask.style.strokeDashoffset = this.yAxisLength;
     }
@@ -67,7 +66,6 @@ class WorkSection extends TemplateRenderer {
         const mask = this.shadowRoot.querySelector('#mask');
         const dashoffset =
             (this.yAxisLength - scrollPos * this.yAxisLength / (this.selfHeight));
-        console.log('Dash offset', dashoffset)
         mask.style.strokeDashoffset = '' + dashoffset;
 
         this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
