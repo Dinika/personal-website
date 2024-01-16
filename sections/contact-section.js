@@ -35,7 +35,6 @@ class ContactSection extends TemplateRenderer {
 
             a {
                 font-family: 'Quicksand', sans-serif;
-                font-size: 20px;
                 font-weight: 700;
                 line-height: 25px;
                 letter-spacing: 0em;
@@ -94,7 +93,45 @@ class ContactSection extends TemplateRenderer {
 
             .copy-text:hover .copy-button {
                 opacity: 0.7;
-            } 
+            }
+
+            @media (width <= 900px) {
+                :host {
+                    margin: 0; 
+                }
+
+                h1 {
+                    font-size: 2.6rem;
+                    margin-bottom: 1rem;
+                }
+
+                h4 {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-top: 0;
+                    max-width: unset;
+                    font-size: 1rem;
+                }
+
+                app-paper {
+                    padding: 2rem;
+                }
+
+                .copy-text .copy-button {
+                    opacity: 1;
+                }
+
+                .header {
+                    width: max-content;
+                }
+
+                img {
+                    width: 1rem;
+                }
+            }
 
         </style>
         
