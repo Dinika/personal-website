@@ -191,7 +191,7 @@ class ProjectsByYear extends TemplateRenderer {
 
                 @media (width <= 900px) {
                     .project-details {
-                        width: 100vw; 
+                        width: 80vw; 
                     }
 
                     .horizontal-media-scroller {
