@@ -51,7 +51,6 @@ class AboutSection extends TemplateRenderer {
 
             a {
                 font-family: 'Quicksand', sans-serif;
-                font-size: 20px;
                 font-weight: 700;
                 line-height: 25px;
                 letter-spacing: 0em;
@@ -81,6 +80,28 @@ class AboutSection extends TemplateRenderer {
                 width: 100%; 
                 left: 0; 
             } 
+
+            @media (width <= 900px) {
+                :host {
+                    margin: 4rem 0 0 0; 
+                }
+                
+                h1 {
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                }
+
+                h4 {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-top: 0;
+                    max-width: unset;
+                    font-size: 1rem;
+                }
+            }
 
         </style>
         
