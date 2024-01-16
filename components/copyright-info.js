@@ -21,7 +21,6 @@ class CopyrightInfo extends TemplateRenderer {
 
             a {
                 font-family: 'Quicksand', sans-serif;
-                font-size: 18px;
                 color: var(--primary-700);
                 text-decoration: none;
                 cursor: pointer;
@@ -29,6 +28,12 @@ class CopyrightInfo extends TemplateRenderer {
 
             .highlight {
                 color: var(--primary-700);
+            }
+
+            @media (width <= 900px) {
+                p {
+                    font-size: 0.75rem;
+                }
             }
         </style>
         
