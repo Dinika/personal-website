@@ -114,7 +114,7 @@ class ProjectDialog extends TemplateRenderer {
                     letter-spacing: 0em;
                     text-align: left;
                     text-decoration: none;
-                    color: var(--primary-500);
+                    color: var(--primary-700);
                     display: inline-block;
                     position: relative;
                     margin-left: 4px;
@@ -159,11 +159,46 @@ class ProjectDialog extends TemplateRenderer {
                         width: 80%;
                         max-height: 70%;
                         padding-left: 1.5rem;
+                        padding-top: 2rem;
                     }
 
                     .subheader {
                         flex-direction: column;
                         align-items: flex-start;
+                        margin-top: 0.5rem;
+                    }
+                    
+                    p {
+                        font-size: 0.875rem;
+                        margin-top: 1.25rem;
+                        margin-bottom: 1.25rem;
+                    }
+
+                    h5 {
+                        margin-bottom: 1.5rem;
+                    }
+
+                    ul {
+                        max-width: unset;
+                        padding-inline-start: inherit;
+                    }
+
+                    li {
+                        font-size: 0.875rem;
+                    }
+
+                    a {
+                        display: unset;
+                        margin-left: unset;
+                        color: var(--primary-500);
+                    }
+
+                    .badge {
+                        font-size: 0.75rem;
+                        min-width: 5rem;
+                        height: 1.5rem;
+                        line-height: 1.5rem;
+                        margin: 0.25rem 0.5rem;
                     }
                 }
             </style>
@@ -191,7 +226,7 @@ class ProjectDialog extends TemplateRenderer {
                     ${this.project.details.resource_links.length > 0 ? `
                             <h5>Links</h5>
                             <ul>
-                                ${this.project.details.resource_links.map(l => `<li><a style="color: var(--text-700)" href="${l.link}">${l.label}</a></li>`).join('')}
+                                ${this.project.details.resource_links.map(l => `<li><a href="${l.link}">${l.label}</a></li>`).join('')}
                             </ul>   
                         `
                     : ``
