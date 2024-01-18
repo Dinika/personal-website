@@ -107,7 +107,7 @@ class WorkSection extends TemplateRenderer {
             @media (width <= 900px) {
                 :host {
                     margin-top: 2.5rem;
-                    margin-left: 0;
+                    margin-left: 1rem;
                 }
                 .container {
                     width: max-content;

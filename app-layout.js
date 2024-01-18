@@ -54,7 +54,7 @@ class AppLayout extends TemplateRenderer {
 
                 @media (width <= 900px) {
                     :host {
-                        padding: 3rem 2rem 0px 3rem; 
+                        padding: 3rem 2rem 0px 2rem; 
                     }
                 }
                 

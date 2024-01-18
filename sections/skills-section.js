@@ -143,7 +143,7 @@ class SkillsSection extends TemplateRenderer {
                     padding-top: 1.25rem;
                     padding-bottom: 1.25rem;
                     padding-left: 1.125rem;
-                    width: 16rem;
+                    width: 100%;
                 }
 
                 app-paper.full-height {
