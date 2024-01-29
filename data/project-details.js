@@ -1,4 +1,27 @@
 export const detailsById = {
+    '33': {
+        name: 'Fusion',
+        key_roles: [
+            `Developed a tool that queries ES documents to help scientists quickly load and find discrepancies in 100k+ resources.`,
+            `Developed "shopping cart" to allow users to bulk download data resources from different parts of the applications.`,
+            `Built the infrastructure for e2e testing and monitoring of the application to enable it to go into maintenance phase with less than 20% of original development resources.`,
+        ],
+        resource_links: [
+            {
+                label: 'Source Code',
+                link: 'https://github.com/BlueBrain/nexus-web'
+            },
+            {
+                label: 'Public Studios',
+                link: 'https://bbp.epfl.ch/nexus/web/studios'
+            },
+            {
+                label: 'Web Application',
+                link: 'https://bbp.epfl.ch/nexus/web/'
+            },
+        ],
+        technologies: ['React', 'React Query', 'Jest', 'Vitest', 'ElasticSearch', 'Sentry', 'Github Actions', 'Cypress', 'Redux']
+    },
     '32': {
         name: 'WRAP',
         key_roles: [

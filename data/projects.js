@@ -11,7 +11,7 @@ export const projects = {
                 {
                     name: 'Fusion',
                     role: 'Frontend & SRE',
-                    description: 'Open source interface to upload and manage data.',
+                    description: 'Open source interface to manage large volumes of data.',
                     id: '33'
                 },
                 {
