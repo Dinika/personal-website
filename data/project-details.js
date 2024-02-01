@@ -1,10 +1,62 @@
 export const detailsById = {
-    '33': {
+    '38': {
+        name: 'Microsquad',
+        description: `A VR game designed to teach physics to young kids.`,
+        key_roles: [
+            `Developing a mobile client for the game that acts as a joystick for remote players.`,
+            `Design a 3d joystick in blender.`,
+        ],
+        resource_links: [
+            {
+                label: 'Source Code',
+                link: 'https://github.com/CMCRobotics/microsquad'
+            }
+        ],
+        technologies: ['AFrame', 'Webpack', 'Blender']
+    },
+    '37': {
+        name: 'Webm to Mp4',
+        description: `Primarily designed for centos based operating systems, this is a shell script that can be executed through the context menu in file explorer, aka nautilus,
+        or through the command line. I wrote it to quickly convert webm videos (default for gnome screencast recorder) which does not play on Mac devices
+        to mp4 format.`,
+        resource_links: [
+            {
+                label: 'Source Code',
+                link: 'https://github.com/Dinika/convert-webm-to-mp4'
+            }
+        ],
+        technologies: ['Bash']
+    },
+    '36': {
+        name: 'Image Annotate',
+        description: `A cross platform desktop application that provides simple image editting. The default gnome screenshot application does not allow me to scribble on the screenshot - a feature
+        I often use when writing wikis, so I developed this application.`,
+        resource_links: [
+            {
+                label: 'Source Code',
+                link: 'https://github.com/Dinika/image-annotate'
+            }
+        ],
+        technologies: ['Tauri', 'JavaScript', 'Rust', 'Canvas']
+    },
+    '35': {
+        name: 'Delta',
+        key_roles: [
+            `Reduced storage demands of blazegraph instances in production from 175GB to 38GB by trimming journal to only include relevant event information.`,
+            `Contributed towards development of features that allowed users to download large resources using their ids.`,
+        ],
+        resource_links: [
+
+        ],
+        technologies: ['Scala', 'Cats Effect', 'ElasticSearch', 'Blazegraph', 'Kubernetes']
+    },
+    '34': {
         name: 'Fusion',
         key_roles: [
             `Developed a tool that queries ES documents to help scientists quickly load and find discrepancies in 100k+ resources.`,
             `Developed "shopping cart" to allow users to bulk download data resources from different parts of the applications.`,
-            `Built the infrastructure for e2e testing and monitoring of the application to enable it to go into maintenance phase with less than 20% of original development resources.`,
+            `Enabled easier transition of the project into maintainence phase by building the infrastructure for e2e testing and monitoring of the application. 
+                This enabled the organisation to spend less than 20% of original resources on fusion thereby allowing efficient development of another high stake application (Open Brain Platform).`,
         ],
         resource_links: [
             {
@@ -20,7 +72,23 @@ export const detailsById = {
                 link: 'https://bbp.epfl.ch/nexus/web/'
             },
         ],
-        technologies: ['React', 'React Query', 'Jest', 'Vitest', 'ElasticSearch', 'Sentry', 'Github Actions', 'Cypress', 'Redux']
+        technologies: ['React', 'React Query', 'Jest', 'Vitest', 'ElasticSearch', 'Sentry', 'Github Actions', 'Cypress', 'Redux', 'Kubernetes']
+    },
+    '33': {
+        name: 'Open Brain Platform',
+        key_roles: [
+            `Lead the development of "Virtual lab" (a feature similar to "repositories" in GitLab/Github) on the client side that allows users to collaborate on neuroscience datasets.`,
+            `Developed the chat feature on the client that leverages OpenApi to allow users to ask and share neuroscience questions.`,
+            `Improved API response times by nearly 95% by implementing caching on client and server sides`,
+            `Introduced component based unit testing within the team.`
+        ],
+        resource_links: [
+            {
+                label: 'Web application',
+                link: 'https://open-brain-platform.org/home'
+            },
+        ],
+        technologies: ['React', 'Next', 'Jotai', 'Jest', 'FastAPI', 'ElasticSearch', 'Testing Library']
     },
     '32': {
         name: 'WRAP',

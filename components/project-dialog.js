@@ -33,7 +33,7 @@ class ProjectDialog extends TemplateRenderer {
             <style>
                 dialog {
                     min-width: 50rem;
-                    max-width: 980px;
+                    max-width: 500px;
                     border-radius: 20px;
                     border: none;
                     background: var(--primary-300);
@@ -139,7 +139,7 @@ class ProjectDialog extends TemplateRenderer {
                 }
 
                 .badge {
-                    min-width: 108px;
+                    min-width: 98px;
                     height: 36px;
                     background: var(--primary-700);
                     border-radius: 20px;
@@ -150,6 +150,8 @@ class ProjectDialog extends TemplateRenderer {
                     line-height: 36px;
                     margin: 4px 10px;
                     font-weight: 500;
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
 
                 @media (width <= 900px) {
@@ -214,14 +216,21 @@ class ProjectDialog extends TemplateRenderer {
                     </div>
                 </div>
 
-                <p>${this.project.description}</p>
+                <p>${this.project.details?.description ?? this.project.description}</p>
 
                 ${this.project.details ? `
-                    <h5>Key roles and responsibilities</h5>
 
-                    <ul>
-                        ${this.project.details.key_roles.map(r => `<li>${r}</li>`).join('')}
-                    </ul>
+                    ${this.project.details.key_roles?.length > 0
+                    ?
+                    `
+                            <h5>Key roles and responsibilities</h5>
+
+                            <ul>
+                                ${this.project.details.key_roles.map(r => `<li>${r}</li>`).join('')}
+                            </ul>
+                        `
+                    : ''}
+                    
 
                     ${this.project.details.resource_links.length > 0 ? `
                             <h5>Links</h5>

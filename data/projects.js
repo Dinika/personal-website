@@ -9,20 +9,20 @@ export const projects = {
             designation: 'Software Engineer',
             projects: [
                 {
-                    name: 'Fusion',
-                    role: 'Frontend & SRE',
-                    description: 'Open source interface to manage large volumes of data.',
-                    id: '33'
-                },
-                {
                     name: 'Open Brain Platform',
                     role: 'Developer',
                     description: 'Interface for neuroscientists to manage experiments using digital reconstructions of the brain.',
+                    id: '33'
+                },
+                {
+                    name: 'Fusion',
+                    role: 'Frontend & SRE',
+                    description: 'Open source interface to manage large volumes of data.',
                     id: '34'
                 },
                 {
                     name: 'Delta',
-                    role: 'Developer',
+                    role: 'Part time developer',
                     description: 'Scala server to help organize data in a knowledge graph.',
                     id: '35'
                 },
@@ -50,7 +50,7 @@ export const projects = {
                     name: 'Microsquad',
                     role: 'Contributor',
                     description: 'A VR game designed to teach physics to kids.',
-                    id: '36'
+                    id: '38'
                 },
             ]
         }
