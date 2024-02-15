@@ -134,5 +134,17 @@ export const detailsById = {
         resource_links: [
         ],
         technologies: ['Angular', 'Java', 'JavaScript', 'Git']
+    },
+    '29': {
+        name: 'TI Logbook',
+        key_roles: [
+            `As the technical lead of the team one of my main responsibilites was to plan project milestones and communicate them to our stakeholders, organize development work
+             within the team, and design the architecture for the application.`,
+            `Design solutions for limited offline use of critical features such as managing work orders in "under maintainence" areas.`,
+            `Planned and contributed to the migration of the application from AngularJS and php to Angular 13 and Java within 4 months.`,
+            `Developed infrastructure for CI/CD for the application.`,
+        ],
+        resource_links: [],
+        technologies: ['Java', 'Angular', 'Spring', 'Gitlab CI', 'nginx', 'php']
     }
 }

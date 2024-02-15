@@ -22,7 +22,7 @@ export const projects = {
                 },
                 {
                     name: 'Delta',
-                    role: 'Part time developer',
+                    role: 'Contributor',
                     description: 'Scala server to help organize data in a knowledge graph.',
                     id: '35'
                 },
