@@ -73,6 +73,7 @@ class NavBar extends TemplateRenderer {
                 <li><a class="section-link" href="#work">Work</a></li>
                 <li><a class="section-link" href="#skills">Skills</a></li>
                 <li><a class="section-link" href="#about">About</a></li>
+                <li><a class="section-link" href="https://blog.dinika.greyllama.cc">Blog</a></li>
                 <li><a class="section-link" href="#contact">Contact</a></li>
                 <li><a href="https://dinika.github.io/personal-website/Resume_Dinika_Saxena.pdf" download>Resume</a></li>
             </ul>
